@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Bootstrap 4-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/color-palettes.css" />
     <link
       rel="icon"
       type="image/png"
@@ -42,7 +43,17 @@
     <section class="bg-white hero p-0">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-5 text-center col-fixed" style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #fff200 100%);">
+          <div
+            class="col-sm-5 text-center col-fixed"
+            style="
+              background: linear-gradient(
+                135deg,
+                var(--primary-gold) 0%,
+                #ffed4e 50%,
+                #fff200 100%
+              );
+            "
+          >
             <div class="logo">
               <img
                 src="img/icon.png"
@@ -53,36 +64,179 @@
                   object-fit: cover;
                   width: 230px;
                   height: 230px;
-                  border: 10px solid #fff;
+                  border: 10px solid var(--white);
+                  box-shadow: 0 8px 25px rgba(44, 44, 44, 0.2);
                 "
               />
             </div>
-            <h3 style="color: #b8860b; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Jeevan Casting</h3>
-            <p class="mt-1" style="color: #8b4513; font-weight: 600;">Discover Your Next Star</p>
+            <h3
+              style="
+                color: var(--secondary-charcoal);
+                font-weight: bold;
+                text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+              "
+            >
+              Jeevan Casting
+            </h3>
+            <p
+              class="mt-1"
+              style="color: var(--accent-brown); font-weight: 600"
+            >
+              Discover Your Next Star
+            </p>
 
-            <div class="launch-text" style="color: #b8860b; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-              Our Website is Comming Soon <br />
+            <div
+              class="launch-text"
+              style="
+                color: var(--secondary-charcoal);
+                text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+              "
+            >
+              Our Website is Coming Soon <br />
               Stay Tuned !!
             </div>
-            <ul id="timer" style="list-style: none; padding: 0; display: flex; justify-content: center; margin-top: 20px; background: linear-gradient(45deg, #ffb347, #ffd700); border-radius: 15px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-              <li style="margin: 0 10px; text-align: center;">
-                <span class="days" style="display: block; font-size: 2rem; font-weight: bold; color: #8b4513; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">00</span>
-                <p class="days_text" style="margin: 0; color: #654321; font-weight: 600;">Days</p>
+            <ul
+              id="timer"
+              style="
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                background: linear-gradient(
+                  45deg,
+                  #ffed4e,
+                  var(--primary-gold)
+                );
+                border-radius: 15px;
+                padding: 15px;
+                box-shadow: 0 6px 20px rgba(44, 44, 44, 0.15);
+              "
+            >
+              <li style="margin: 0 10px; text-align: center">
+                <span
+                  class="days"
+                  style="
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--secondary-charcoal);
+                    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                  "
+                  >00</span
+                >
+                <p
+                  class="days_text"
+                  style="
+                    margin: 0;
+                    color: var(--accent-brown);
+                    font-weight: 600;
+                  "
+                >
+                  Days
+                </p>
               </li>
-              <li class="seperator" style="font-size: 2rem; color: #8b4513; margin: 0 5px; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">:</li>
-              <li style="margin: 0 10px; text-align: center;">
-                <span class="hours" style="display: block; font-size: 2rem; font-weight: bold; color: #8b4513; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">00</span>
-                <p class="hours_text" style="margin: 0; color: #654321; font-weight: 600;">Hours</p>
+              <li
+                class="seperator"
+                style="
+                  font-size: 2rem;
+                  color: var(--secondary-charcoal);
+                  margin: 0 5px;
+                  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                "
+              >
+                :
               </li>
-              <li class="seperator" style="font-size: 2rem; color: #8b4513; margin: 0 5px; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">:</li>
-              <li style="margin: 0 10px; text-align: center;">
-                <span class="minutes" style="display: block; font-size: 2rem; font-weight: bold; color: #8b4513; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">00</span>
-                <p class="minutes_text" style="margin: 0; color: #654321; font-weight: 600;">Minutes</p>
+              <li style="margin: 0 10px; text-align: center">
+                <span
+                  class="hours"
+                  style="
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--secondary-charcoal);
+                    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                  "
+                  >00</span
+                >
+                <p
+                  class="hours_text"
+                  style="
+                    margin: 0;
+                    color: var(--accent-brown);
+                    font-weight: 600;
+                  "
+                >
+                  Hours
+                </p>
               </li>
-              <li class="seperator" style="font-size: 2rem; color: #8b4513; margin: 0 5px; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">:</li>
-              <li style="margin: 0 10px; text-align: center;">
-                <span class="seconds" style="display: block; font-size: 2rem; font-weight: bold; color: #8b4513; text-shadow: 1px 1px 2px rgba(255,255,255,0.5);">00</span>
-                <p class="seconds_text" style="margin: 0; color: #654321; font-weight: 600;">Seconds</p>
+              <li
+                class="seperator"
+                style="
+                  font-size: 2rem;
+                  color: var(--secondary-charcoal);
+                  margin: 0 5px;
+                  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                "
+              >
+                :
+              </li>
+              <li style="margin: 0 10px; text-align: center">
+                <span
+                  class="minutes"
+                  style="
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--secondary-charcoal);
+                    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                  "
+                  >00</span
+                >
+                <p
+                  class="minutes_text"
+                  style="
+                    margin: 0;
+                    color: var(--accent-brown);
+                    font-weight: 600;
+                  "
+                >
+                  Minutes
+                </p>
+              </li>
+              <li
+                class="seperator"
+                style="
+                  font-size: 2rem;
+                  color: var(--secondary-charcoal);
+                  margin: 0 5px;
+                  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                "
+              >
+                :
+              </li>
+              <li style="margin: 0 10px; text-align: center">
+                <span
+                  class="seconds"
+                  style="
+                    display: block;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--secondary-charcoal);
+                    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+                  "
+                  >00</span
+                >
+                <p
+                  class="seconds_text"
+                  style="
+                    margin: 0;
+                    color: var(--accent-brown);
+                    font-weight: 600;
+                  "
+                >
+                  Seconds
+                </p>
               </li>
             </ul>
           </div>
@@ -92,10 +246,23 @@
               <div class="container-fluid">
                 <div style="" class="row">
                   <div class="col-sm-8 mx-auto text-center">
-                    <h2 style="color: #ff8c00; background: linear-gradient(45deg, #ffd700, #ffb347); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;" class="pb-3">About Us</h2>
+                    <h2 style="color: #000000; font-weight: 700" class="pb-3">
+                      About Us
+                    </h2>
 
-                    <p class="text-muted" style="">
-                      At Jeevan Casting, we are passionate about discovering exceptional talent for the film industry. As experienced casting directors, we connect talented actors with exciting movie projects, helping bring stories to life on the big screen. Our expertise spans across all genres and roles, from lead characters to supporting cast, ensuring every production finds its perfect ensemble.
+                    <p class="text-muted" style="color: #000000 !important">
+                      Founded by Mumbai-based Casting Director Abhishek Kumar
+                      (Jeevan), Jeevan Casting is a dynamic agency dedicated to
+                      the art of discovery. We specialize in connecting
+                      visionary creators with the perfect faces and the finest
+                      actors in the industry.
+                      <br /><br />
+                      With a powerful nationwide network and a team of seasoned
+                      professionals, we streamline the casting process for Hindi
+                      Feature Films, Web Series, and Television Commercials. Our
+                      deep passion for the craft of acting ensures that every
+                      project we touch is backed by talent that truly brings the
+                      story to life.
                     </p>
                   </div>
                 </div>
@@ -104,74 +271,125 @@
                   <div class="col-sm-4 mt-2 text-center">
                     <p>
                       <ion-icon
-                        name="videocam-outline"
-                        style="font-size: 2rem; color: #ff8c00;"
+                        name="film-outline"
+                        style="font-size: 2rem; color: var(--accent-brown)"
                       ></ion-icon>
                     </p>
-                    <h4 style="font-size: 0.9rem">
-                      Ads Films and Web shows
+                    <h4
+                      style="
+                        font-size: 0.9rem;
+                        color: #000000;
+                        font-weight: 600;
+                      "
+                    >
+                      Hindi Feature Films
                     </h4>
-                    <p class="text-muted" style="font-size: 0.8rem">
-                      Professional casting services for feature films, Ads, commercials, and digital content.
+                    <p
+                      class="text-muted"
+                      style="font-size: 0.8rem; color: #666 !important"
+                    >
+                      Comprehensive casting solutions for Bollywood and regional
+                      Hindi cinema projects.
                     </p>
                   </div>
 
                   <div class="col-sm-4 mt-2 text-center">
                     <p>
                       <ion-icon
-                        name="people-outline"
-                        style="font-size: 2rem; color: #ff8c00;"
+                        name="tv-outline"
+                        style="font-size: 2rem; color: var(--accent-brown)"
                       ></ion-icon>
                     </p>
-                    <h4 style="font-size: 0.9rem">
-                      Workshop
+                    <h4
+                      style="
+                        font-size: 0.9rem;
+                        color: #000000;
+                        font-weight: 600;
+                      "
+                    >
+                      Web Series & OTT
                     </h4>
-                    <p class="text-muted" style="font-size: 0.8rem">
-                    We organise Casting Workshops  </p>
+                    <p
+                      class="text-muted"
+                      style="font-size: 0.8rem; color: #666 !important"
+                    >
+                      Specialized casting for digital platforms and streaming
+                      content across all genres.
+                    </p>
                   </div>
 
                   <div class="col-sm-4 mt-2 text-center">
                     <p>
                       <ion-icon
-                        name="star-outline"
-                        style="font-size: 2rem; color: #ff8c00;"
+                        name="megaphone-outline"
+                        style="font-size: 2rem; color: var(--accent-brown)"
                       ></ion-icon>
                     </p>
-                    <h4 style="font-size: 0.9rem">
-                      Audition Coordination
+                    <h4
+                      style="
+                        font-size: 0.9rem;
+                        color: #000000;
+                        font-weight: 600;
+                      "
+                    >
+                      Television Commercials
                     </h4>
-                    <p class="text-muted" style="font-size: 0.8rem">
-                      Professional audition setup, scheduling, and coordination to ensure smooth casting processes.
+                    <p
+                      class="text-muted"
+                      style="font-size: 0.8rem; color: #666 !important"
+                    >
+                      Expert casting for brand campaigns, TVC productions, and
+                      advertising content.
                     </p>
                   </div>
                   <div class="row justify-content-center mt-5">
                     <div class="col-12 col-md-4 mt-2 text-center">
                       <p>
                         <ion-icon
-                          name="film-outline"
-                          style="font-size: 2rem; color: #ff8c00;"
+                          name="people-outline"
+                          style="font-size: 2rem; color: var(--accent-brown)"
                         ></ion-icon>
                       </p>
-                      <h4 style="font-size: 0.9rem">
-                        Production Consulting
+                      <h4
+                        style="
+                          font-size: 0.9rem;
+                          color: #000000;
+                          font-weight: 600;
+                        "
+                      >
+                        Talent Management
                       </h4>
-                      <p class="text-muted" style="font-size: 0.8rem">
-                        Expert guidance on casting decisions, character development, and talent selection for your project.
+                      <p
+                        class="text-muted"
+                        style="font-size: 0.8rem; color: #666 !important"
+                      >
+                        Building and nurturing relationships with actors across
+                        all experience levels nationwide.
                       </p>
                     </div>
 
                     <div class="col-12 col-md-4 mt-2 text-center">
                       <p>
                         <ion-icon
-                          name="trophy-outline"
-                          style="font-size: 2rem; color: #ff8c00;"
+                          name="location-outline"
+                          style="font-size: 2rem; color: var(--accent-brown)"
                         ></ion-icon>
                       </p>
-                      <p style="font-size: 0.9rem; font-weight: 600">
-                        Award-Winning Projects
+                      <p
+                        style="
+                          font-size: 0.9rem;
+                          font-weight: 600;
+                          color: #000000;
+                        "
+                      >
+                        Nationwide Network
                       </p>
-                      <p class="text-muted" style="font-size: 0.8rem">
-                        Proud to have cast talent for critically acclaimed films and successful commercial projects.
+                      <p
+                        class="text-muted"
+                        style="font-size: 0.8rem; color: #666 !important"
+                      >
+                        Extensive reach across India with local connections in
+                        major film production hubs.
                       </p>
                     </div>
                   </div>
@@ -181,24 +399,51 @@
 
             <!-- Footer -->
             <footer
-              style="background: linear-gradient(135deg, #ff8c00 0%, #ffd700 50%, #ffb347 100%); color: #fff; padding: 40px 0; box-shadow: 0 -4px 15px rgba(0,0,0,0.2);"
+              class="ml-10"
+              style="
+                background: #000000;
+                color: var(--white);
+                padding: 40px 0;
+                box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.5);
+              "
             >
               <div class="container">
                 <div class="row text-center">
                   <!-- Contact Information -->
                   <div class="col-12 mb-4">
-                    <h5 class="mb-3" style="color: #fff; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Contact Jeevan Casting</h5>
-                    <hr style="border-top: 2px solid #fff; width: 50%; margin: 0 auto; opacity: 0.8;" />
+                    <h5
+                      class="mb-3"
+                      style="
+                        color: var(--white);
+                        font-weight: bold;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+                      "
+                    >
+                      Contact Jeevan Casting
+                    </h5>
+                    <hr
+                      style="
+                        border-top: 2px solid var(--primary-gold);
+                        width: 50%;
+                        margin: 0 auto;
+                        opacity: 0.9;
+                      "
+                    />
                     <div class="mt-3">
-                      <p style="color: #fff; margin-bottom: 15px">
+                      <p style="color: var(--white); margin-bottom: 15px">
                         <ion-icon
                           name="mail-outline"
-                          style="vertical-align: middle; font-size: 20px; color: #fff; margin-right: 10px;"
+                          style="
+                            vertical-align: middle;
+                            font-size: 20px;
+                            color: var(--primary-gold);
+                            margin-right: 10px;
+                          "
                         ></ion-icon>
                         <a
                           href="mailto:castingjeevan@gmail.com"
                           style="
-                            color: #fff;
+                            color: var(--white);
                             text-decoration: none;
                             vertical-align: middle;
                           "
@@ -207,9 +452,14 @@
                         </a>
                       </p>
 
-                      <p style="color: #fff; margin-bottom: 15px">
+                      <p style="color: var(--white); margin-bottom: 15px">
                         <ion-icon
-                          style="vertical-align: middle; font-size: 20px; color: #fff; margin-right: 10px;"
+                          style="
+                            vertical-align: middle;
+                            font-size: 20px;
+                            color: var(--primary-gold);
+                            margin-right: 10px;
+                          "
                           name="call-outline"
                         ></ion-icon>
                         +91 7360802196
@@ -219,7 +469,13 @@
                 </div>
 
                 <div class="text-center mt-4">
-                  <p style="font-size: 14px; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+                  <p
+                    style="
+                      font-size: 14px;
+                      color: var(--white);
+                      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+                    "
+                  >
                     &copy; 2025 Jeevan Casting - All Rights Reserved
                   </p>
                 </div>
@@ -280,5 +536,6 @@
         ).padStart(2, "0");
       }, 1000);
     </script>
+    <script src="js/palette-switcher.js"></script>
   </body>
 </html>

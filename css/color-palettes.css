@@ -1,0 +1,278 @@
+/*
+===============================================
+JEEVAN CASTING - PROFESSIONAL COLOR PALETTES
+===============================================
+5 Premium Color Schemes for Casting & Talent Agency
+*/
+
+/* ============================================
+   PALETTE 1: CINEMATIC GOLD & CHARCOAL (ACTIVE)
+   ============================================ */
+.palette-cinematic {
+    --primary-gold: #FFD700;        /* Hero backgrounds, logo, primary buttons */
+    --secondary-charcoal: #2C2C2C;  /* Navigation, headers, text */
+    --accent-brown: #8B4513;        /* Links, highlights, icons */
+    --background-light: #F8F8F8;    /* Page background, cards */
+    --text-dark: #1A1A1A;          /* Body text, headings */
+    --white: #FFFFFF;               /* Pure white for contrast */
+}
+
+/* ============================================
+   PALETTE 2: HOLLYWOOD NOIR
+   ============================================ */
+.palette-noir {
+    --primary-gold: #FFD700;        /* Logo, primary elements */
+    --secondary-black: #1C1C1C;     /* Headers, navigation */
+    --accent-goldenrod: #B8860B;    /* Subtle accents, borders */
+    --background-white: #FFFFFF;    /* Clean backgrounds */
+    --highlight-vermillion: #FF6B35; /* CTAs, urgent actions */
+    --text-black: #1C1C1C;         /* Primary text */
+}
+
+/* ============================================
+   PALETTE 3: WARM PROFESSIONAL
+   ============================================ */
+.palette-warm {
+    --primary-gold: #FFD700;        /* Brand elements */
+    --secondary-gray: #4A4A4A;      /* Text, subtle backgrounds */
+    --accent-chocolate: #D2691E;    /* Warm accents, highlights */
+    --background-off-white: #FAFAFA; /* Page backgrounds */
+    --support-green: #8FBC8F;       /* Success states, positive actions */
+    --text-medium: #4A4A4A;         /* Readable text */
+}
+
+/* ============================================
+   PALETTE 4: MODERN CINEMATIC
+   ============================================ */
+.palette-modern {
+    --primary-gold: #FFD700;        /* Brand consistency */
+    --secondary-slate: #2F4F4F;     /* Professional headers */
+    --accent-peru: #CD853F;         /* Warm accents */
+    --background-smoke: #F5F5F5;    /* Subtle backgrounds */
+    --highlight-steel: #4682B4;     /* Action buttons, links */
+    --text-slate: #2F4F4F;          /* Professional text */
+}
+
+/* ============================================
+   PALETTE 5: ELEGANT STUDIO
+   ============================================ */
+.palette-elegant {
+    --primary-gold: #FFD700;        /* Signature brand color */
+    --secondary-charcoal-blue: #36454F; /* Sophisticated backgrounds */
+    --accent-sienna: #A0522D;       /* Warm professional accents */
+    --background-almost-white: #FDFDFD; /* Clean, minimal backgrounds */
+    --support-slate-gray: #708090;  /* Secondary text, borders */
+    --text-charcoal: #36454F;       /* Primary readable text */
+}
+
+/* ============================================
+   IMPLEMENTATION CLASSES
+   ============================================ */
+
+/* Primary Buttons for each palette */
+.btn-palette-1 {
+    background: linear-gradient(135deg, var(--primary-gold), #FFED4E);
+    color: var(--secondary-charcoal);
+    border: none;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-palette-1:hover {
+    background: var(--secondary-charcoal);
+    color: var(--primary-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.4);
+}
+
+.btn-palette-2 {
+    background: var(--secondary-black);
+    color: var(--primary-gold);
+    border: 2px solid var(--primary-gold);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-palette-2:hover {
+    background: var(--primary-gold);
+    color: var(--secondary-black);
+    border-color: var(--secondary-black);
+}
+
+.btn-palette-3 {
+    background: var(--accent-chocolate);
+    color: var(--background-off-white);
+    border: none;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-palette-3:hover {
+    background: var(--secondary-gray);
+    color: var(--primary-gold);
+}
+
+.btn-palette-4 {
+    background: var(--highlight-steel);
+    color: var(--background-smoke);
+    border: none;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-palette-4:hover {
+    background: var(--secondary-slate);
+    color: var(--primary-gold);
+}
+
+.btn-palette-5 {
+    background: var(--secondary-charcoal-blue);
+    color: var(--primary-gold);
+    border: 2px solid var(--accent-sienna);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-palette-5:hover {
+    background: var(--accent-sienna);
+    color: var(--background-almost-white);
+    border-color: var(--primary-gold);
+}
+
+/* Card Styles for each palette */
+.card-palette-1 {
+    background: var(--white);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(44, 44, 44, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-palette-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(44, 44, 44, 0.15);
+}
+
+.card-palette-2 {
+    background: var(--background-white);
+    border: 1px solid var(--accent-goldenrod);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(28, 28, 28, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-palette-2:hover {
+    border-color: var(--primary-gold);
+    box-shadow: 0 8px 25px rgba(28, 28, 28, 0.15);
+}
+
+/* Hero Section Gradients */
+.hero-gradient-1 {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, #FFED4E 50%, #FFF200 100%);
+}
+
+.hero-gradient-2 {
+    background: linear-gradient(135deg, var(--secondary-black) 0%, var(--accent-goldenrod) 100%);
+}
+
+.hero-gradient-3 {
+    background: linear-gradient(135deg, var(--accent-chocolate) 0%, var(--primary-gold) 100%);
+}
+
+.hero-gradient-4 {
+    background: linear-gradient(135deg, var(--secondary-slate) 0%, var(--highlight-steel) 100%);
+}
+
+.hero-gradient-5 {
+    background: linear-gradient(135deg, var(--secondary-charcoal-blue) 0%, var(--accent-sienna) 100%);
+}
+
+/* Footer Gradients */
+.footer-gradient-1 {
+    background: linear-gradient(135deg, var(--secondary-charcoal) 0%, var(--accent-brown) 50%, var(--primary-gold) 100%);
+}
+
+.footer-gradient-2 {
+    background: linear-gradient(135deg, var(--secondary-black) 0%, var(--accent-goldenrod) 100%);
+}
+
+.footer-gradient-3 {
+    background: linear-gradient(135deg, var(--secondary-gray) 0%, var(--accent-chocolate) 100%);
+}
+
+.footer-gradient-4 {
+    background: linear-gradient(135deg, var(--secondary-slate) 0%, var(--accent-peru) 100%);
+}
+
+.footer-gradient-5 {
+    background: linear-gradient(135deg, var(--secondary-charcoal-blue) 0%, var(--accent-sienna) 100%);
+}
+
+/* ============================================
+   USAGE GUIDELINES
+   ============================================
+
+   PALETTE 1 - CINEMATIC GOLD & CHARCOAL (Current Active)
+   Best for: Premium, luxury casting agency feel
+   Use: Hero sections, primary branding, high-end presentations
+   
+   PALETTE 2 - HOLLYWOOD NOIR
+   Best for: Classic, dramatic, high-contrast designs
+   Use: Headers, navigation, dramatic sections
+   
+   PALETTE 3 - WARM PROFESSIONAL
+   Best for: Approachable, trustworthy, creative atmosphere
+   Use: Content sections, forms, friendly interactions
+   
+   PALETTE 4 - MODERN CINEMATIC
+   Best for: Contemporary, tech-forward, professional
+   Use: Modern layouts, digital portfolios, tech sections
+   
+   PALETTE 5 - ELEGANT STUDIO
+   Best for: Sophisticated, refined, studio-like atmosphere
+   Use: Portfolio displays, elegant presentations, refined sections
+
+   ============================================ */
+
+/* Quick Palette Switcher (commented out) */
+/*
+.palette-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.palette-switcher button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.palette-switcher .btn-switch-1 { background: #FFD700; color: #2C2C2C; }
+.palette-switcher .btn-switch-2 { background: #1C1C1C; color: #FFD700; }
+.palette-switcher .btn-switch-3 { background: #D2691E; color: #FAFAFA; }
+.palette-switcher .btn-switch-4 { background: #4682B4; color: #F5F5F5; }
+.palette-switcher .btn-switch-5 { background: #36454F; color: #FFD700; }
+*/
