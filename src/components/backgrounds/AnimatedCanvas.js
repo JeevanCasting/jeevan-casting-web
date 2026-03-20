@@ -15,20 +15,13 @@ function AnimatedCanvas() {
     resize();
     window.addEventListener("resize", resize);
 
-    // 🎨 Brand colors from CSS
+    // 🎨 Yellow theme colors
     const brandColors = [
-      getComputedStyle(document.documentElement)
-        .getPropertyValue("--brand-secondary")
-        .trim(),
-      getComputedStyle(document.documentElement)
-        .getPropertyValue("--brand-accent")
-        .trim(),
-      getComputedStyle(document.documentElement)
-        .getPropertyValue("--brand-secondary-hover")
-        .trim(),
-      getComputedStyle(document.documentElement)
-        .getPropertyValue("--brand-accent-hover")
-        .trim(),
+      "#fbbf24", // yellow-400
+      "#f59e0b", // yellow-500
+      "#d97706", // yellow-600
+      "#92400e", // yellow-700
+      "#fde047", // yellow-300
     ];
 
     // 🔧 helper: apply opacity (alpha)
@@ -73,7 +66,7 @@ function AnimatedCanvas() {
       dy: (Math.random() - 0.5) * 0.6, // 👈 vertical speed
       color: withAlpha(
         brandColors[Math.floor(Math.random() * brandColors.length)],
-        0.2 // 👈 opacity here (0.1 → very light, 0.4 → more visible)
+        0.15 // 👈 slightly reduced opacity for yellow theme
       ),
     }));
 

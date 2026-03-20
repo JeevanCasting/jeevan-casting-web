@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+  transform-style: preserve-3d;
+}
 
 body {
   margin: 0;
@@ -18,10 +21,10 @@ code {
 
 :root {
   /* Brand Colors */
-  --brand-primary: #10100b; /* Dark navy/charcoal */
+  --brand-primary: #000000; /* Dark navy/charcoal */
   --card-background: rgba(13, 15, 22, 0.9);
-  --brand-secondary: #67e8f9; /* cyan-300 */
-  --brand-secondary-hover: rgba(34, 211, 238, 0.167); /* cyan-400 with 40% opacity */
+  --brand-secondary: #fff829; /* cyan-300 */
+  --brand-secondary-hover: rgba(230, 252, 29, 0.885); /* cyan-400 with 40% opacity */
   --brand-accent: #EF0163; /* Vivid magenta/red-pink */
   --brand-accent-hover: #ff2f7fc1; /* Darker magenta */
 
@@ -30,8 +33,8 @@ code {
   --neutral-bg-light: #f8fafc; /* Light background (off-white) */
 
   /* Shadows */
-  --shadow-glow: 0 0 60px rgba(239, 1, 100, 0.219); /* Pinkish glow */
-  --shadow-glow-secondary: 0 0 20px rgba(54, 253, 253, 0.44);
+  --shadow-glow: 0 0 60px rgba(244, 225, 11, 0.534); /* Pinkish glow */
+  --shadow-glow-secondary: 0 0 20px rgba(253, 226, 54, 0.43);
 }
 
 @keyframes scroll {

@@ -6,13 +6,14 @@
   justify-content: space-between;
   align-items: center;
   
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
 
   padding: 1rem 1rem;
-  background-color: rgb(17, 24, 39); 
+  background-color: rgba(0, 0, 0, 0.95); 
+  backdrop-filter: blur(10px);
   color: var(--neutral-bg-light);
   
   z-index: 1000;
@@ -23,7 +24,9 @@
 .navbar-logo img {
   height: 40px;
   margin-left: 2rem;
+  filter: brightness(0) saturate(100%) invert(84%) sepia(62%) saturate(748%) hue-rotate(2deg) brightness(103%) contrast(101%);
 }
+
 
 .navbar-links {
   display: flex;
@@ -31,7 +34,7 @@
   gap: 2rem;
   padding: 0.5rem 2rem;
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.151);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -41,15 +44,31 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--neutral-bg-light);
+  color:  rgb(255, 255, 255);
   font-size: 0.8rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: var(--brand-accent);
+.nav-link {
+  position: relative;
 }
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--brand-secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 
 /* Dropdown for desktop */
 .dropdown {
@@ -86,31 +105,54 @@
   display: none;
 }
 
-/* Mobile Menu - from right */
+/* Mobile Menu - dropdown from top */
 .mobile-menu {
   position: fixed;
-  top: 0;
-  right: -60%;
-  width: 60%;
-  height: 100%;
+  top: 70px;
+  left: 0;
+  width: 100%;
   background-color: var(--brand-primary);
   color: var(--neutral-bg-light);
-  padding: 2rem 1rem;
-  transition: right 0.3s ease-in-out;
+  padding: 1rem;
   z-index: 1500;
+  border-top: 1px solid var(--brand-secondary);
 }
 
 .mobile-menu.open {
-  right: 0;
+  display: block;
 }
 
 .mobile-menu ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .mobile-menu li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.mobile-menu .nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  margin: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--neutral-bg-light);
+}
+
+.mobile-menu .nav-link:hover,
+.mobile-menu .nav-link:active {
+  background: var(--brand-secondary);
+  color: var(--brand-primary);
+  transform: scale(1.02);
 }
 
 .mobile-submenu {
@@ -128,6 +170,7 @@
   display: block;
   margin-left: auto;
   margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 /* Overlay */

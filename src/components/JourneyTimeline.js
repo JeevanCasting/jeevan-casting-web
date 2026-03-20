@@ -1,36 +1,30 @@
 import React from "react";
 
 const journey = [
-  { year: "2010-2012", title: "Founded", desc: "Started with a vision." },
-   {
-    year: "2012-2015",
-    title: "Expansion",
-    desc: "Opened new offices globally.",
-  },
-   {
-    year: "2015-2017",
-    title: "Expansion",
-    desc: "Opened new offices globally.",
+  {
+    year: "2017-2018",
+    title: "Entry Into Bollywood",
+    desc: "Debut with Super 30, starting the journey to understand and simplify the casting process.",
   },
   {
-    year: "2017-2019",
-    title: "First Project",
-    desc: "Delivered milestone project.",
+    year: "2018-2019",
+    title: "Building Experience",
+    desc: "Refining the craft through extensive workshops and auditions to master acting technicalities",
   },
   {
-    year: "2019-2022",
-    title: "Expansion",
-    desc: "Opened new offices globally.",
+    year: "2019-2020",
+    title: "Industry Connections",
+    desc: "Established strong networks with leading casting directors, actors, and filmmakers across the industry.",
   },
   {
-    year: "2022-2024",
-    title: "Innovation",
-    desc: "Launched AI-driven solutions.",
+    year: "2020-2024",
+    title: "Casting Expertise",
+    desc: "Collaborated on casting projects under industry-leading companies and top casting directors.",
   },
   {
-    year: "2024-2025",
-    title: "Innovation",
-    desc: "Launched AI-driven solutions.",
+    year: "2024-Present",
+    title: "Casting Initiative",
+    desc: "Completed 200+ projects, providing expert casting for ads, films, and web series.",
   },
 ];
 
@@ -41,17 +35,25 @@ function JourneyTimeline() {
         {journey.map((item, index) => (
           <div key={index} className="relative flex flex-col items-center">
             <div
-              className={`w-40 h-40 flex items-center justify-center
+              className={`w-50 h-50 flex items-center justify-center
                 ${
                   index % 2 === 0
                     ? "border-t-4 border-r-4"
                     : "border-b-4 border-r-4"
                 }
-                border-dashed border-cyan-400`}
+                border-dashed border-[var(--brand-secondary)]`}
             >
-              <div className="text-center px-3">
-                <h4 className="font-bold text-cyan-300">{item.title}</h4>
-                <p className="text-sm text-gray-300">{item.desc}</p>
+              <div  className={`text-center px-3 ${
+                  index % 2 === 0
+                    ? "mt-2"
+                    : "mb-2"
+                }`}>
+                <h4 className="font-bold text-[var(--brand-secondary)]">
+                  {item.title}
+                </h4>
+                <p className="text-[12px] md:text-[13px] lg:text-[14px] text-gray-300 text-justify">
+                  {item.desc}
+                </p>
               </div>
             </div>
 
@@ -64,7 +66,7 @@ function JourneyTimeline() {
             </span>
 
             <div
-              className={`absolute bg-cyan-300 rounded-full h-4 w-4 
+              className={`absolute bg-[var(--brand-secondary)] rounded-full h-4 w-4 
                 ${
                   index % 2 === 0
                     ? "top-0  -translate-y-1/2 "
@@ -85,10 +87,12 @@ function JourneyTimeline() {
                     ? "border-t-4 border-r-4"
                     : "border-t-4 border-l-4"
                 }
-                border-dashed border-cyan-400`}
+                border-dashed border-[var(--brand-secondary)]`}
             >
               <div className="text-center px-3">
-                <h4 className="font-bold text-cyan-300">{item.title}</h4>
+                <h4 className="font-bold text-[var(--brand-secondary)]">
+                  {item.title}
+                </h4>
                 <p className="text-sm text-gray-300">{item.desc}</p>
               </div>
             </div>
@@ -101,7 +105,7 @@ function JourneyTimeline() {
             </span>
 
             <div
-              className={`absolute bg-cyan-300 rounded-full h-4 w-4
+              className={`absolute bg-[var(--brand-secondary)] rounded-full h-4 w-4
     ${
       index % 2 === 0
         ? "right-0 top-1/2 -translate-y-1/2 translate-x-[6px]"

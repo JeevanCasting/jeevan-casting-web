@@ -6,43 +6,38 @@ const ServicesCarousel1 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
+
+
+
   const services = [
     {
-      title: "AI & Intelligent Solutions",
+      title: "TALENT ACQUISITION",
       description:
-        "Predictive analytics, Vision AI (KEYE), and anomaly detection systems for manufacturing and smart cities.",
-      category: "Artificial Intelligence",
-      image: "/ai-robot-technology-futuristic.jpg",
+        "We conduct nationwide scouting for fresh talent and experienced performers, ensuring diversity and excellence in every cast. Beyond traditional casting, we actively scout real-life personalities, influencers, and unconventional faces to bring a unique, authentic energy to every project",
+      category: "Talent Discovery & Scouting",
+      image:
+        "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Surveillance & Security Systems",
+      title: "CASTING DIRECTION & SERVICES",
       description:
-        "Advanced IP cameras, access control, and AI-enabled monitoring solutions for enterprises and government facilities.",
-      category: "Security Technology",
-      image: "/cctv.jpg",
+        "Jeevan Casting provides expert end-to-end solutions for Films, TV, and Ads. From research-driven films to urgent commercials, the agency ensures a 'perfect fit' within any timeline, connecting filmmakers with a diverse pool of established and fresh talent.",
+      category: "Precision | Smooth & Fast End-to-End Process",
+      image:
+        "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWV8ZW58MHx8MHx8fDA%3D",
     },
     {
-      title: "Smart Infrastructure Solutions",
+      title: "ARTIST DEVELOPMENT & WORKSHOPS",
       description:
-        "Comprehensive IT networking, cloud integration, and IoT device management for modern workplaces.",
-      category: "Infrastructure",
-      image: "/smart-city-infrastructure-technology.jpg",
-    },
-    {
-      title: "Industry-Specific Smart Solutions",
-      description:
-        "Custom automation tools and digital workflow solutions for manufacturing, retail, and education sectors.",
-      category: "Custom Solutions",
-      image: "/industrial-automation-manufacturing.jpg",
-    },
-    {
-      title: "SmartOps Applications",
-      description:
-        "Operations dashboards, process automation, and data insights for Industry 4.0 digital transformation.",
-      category: "Operations",
-      image: "/digital-dashboard-analytics-operations.jpg",
+        "Specialized camera and acting workshops led by industry-best trainers for aspiring talent and kids. We streamline the journey from audition techniques to final shoot execution, ensuring every actor is confident, professional, and industry-ready",
+      category: "Transforming Talent into Professionals",
+      image:
+        "https://images.unsplash.com/photo-1563341932-0c7e1870d40f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
+
+
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -88,59 +83,56 @@ const ServicesCarousel1 = () => {
   const maxSlide = Math.max(0, services.length - slidesToShow);
 
   return (
- <div className="max-w-7xl mx-auto px-4 relative overflow-hidden">
-  {/* Slides Container */}
-  <div
-    className="flex transition-transform duration-500 ease-in-out py-5"
-    style={{
-      transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)`,
-    }}
-  >
-    {services.map((service, index) => (
+    <div className="max-w-7xl mx-auto px-4 relative overflow-hidden">
+      {/* Slides Container */}
       <div
-        key={index}
-        className="flex-none px-2" // small gap between cards
-        style={{ width: `${100 / slidesToShow}%` }} // each card width = container / visible cards
+        className="flex transition-transform duration-500 ease-in-out py-5"
+        style={{
+          transform: `translateX(-${currentSlide * (100 / slidesToShow)}%)`,
+        }}
       >
-        <ProductCard1 {...service} />
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex-none px-2" // small gap between cards
+            style={{ width: `${100 / slidesToShow}%` }} // each card width = container / visible cards
+          >
+            <ProductCard1 {...service} />
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {/* Dots + Buttons */}
-  <div className="flex justify-center items-center mt-6 space-x-4">
-    <button
-      onClick={prevSlide}
-      className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--brand-secondary-hover)] text-white flex items-center justify-center border border-[var(--brand-secondary)]/30 hover:border-[var(--brand-secondary)]/50 transition-all duration-300"
-    >
-      ◀
-    </button>
-
-    <div className="flex space-x-2">
-      {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+      {/* Dots + Buttons */}
+      <div className="flex justify-center items-center mt-6 space-x-4">
         <button
-          key={index}
-          onClick={() => goToSlide(index)}
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${
-            currentSlide === index
-              ? "bg-[var(--brand-secondary)]"
-              : "bg-gray-100 hover:bg-gray-200"
-          }`}
-        />
-      ))}
+          onClick={prevSlide}
+          className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--brand-secondary-hover)] text-white flex items-center justify-center border border-[var(--brand-secondary)]/30 hover:border-[var(--brand-secondary)]/50 transition-all duration-300"
+        >
+          ◀
+        </button>
+
+        <div className="flex space-x-2">
+          {Array.from({ length: maxSlide + 1 }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index
+                  ? "bg-[var(--brand-secondary)]"
+                  : "bg-gray-100 hover:bg-gray-200"
+              }`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--brand-secondary-hover)] text-white flex items-center justify-center border border-[var(--brand-secondary)]/30 hover:border-[var(--brand-secondary)]/50 transition-all duration-300"
+        >
+          ▶
+        </button>
+      </div>
     </div>
-
-    <button
-      onClick={nextSlide}
-      className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--brand-secondary-hover)] text-white flex items-center justify-center border border-[var(--brand-secondary)]/30 hover:border-[var(--brand-secondary)]/50 transition-all duration-300"
-    >
-      ▶
-    </button>
-  </div>
-</div>
-
-
-
   );
 };
 
