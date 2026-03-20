@@ -68,7 +68,7 @@ function Footer() {
               <FaInstagram />
             </a>
             <a
-              href="https://www.facebook.com/JeevanCasting/"
+              href="https://www.facebook.com/jiwan.kumar.355138"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 hover:border-[var(--brand-secondary)] hover:text-[var(--brand-secondary)] transition"
