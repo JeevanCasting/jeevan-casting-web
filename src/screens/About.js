@@ -12,25 +12,25 @@ function About() {
     {
       title: "Talent Discovery",
       description:
-        "Scouting fresh faces and seasoned actors across India for films, TV shows, and digital content.",
+        "Scouting fresh faces and seasoned talent across India to find the perfect fit for every screen",
       Icon: Users,
     },
     {
       title: "Casting Direction",
       description:
-        "Expert casting services for Bollywood, regional cinema, and OTT platforms with precision matching.",
+        "Providing expert casting solutions for Bollywood, OTT, and Ads with a focus on precision and speed.",
       Icon: Camera,
     },
     {
-      title: "Artist Management",
+      title: "Acting Workshops",
       description:
-        "Complete portfolio development, audition prep, and career guidance for aspiring artists.",
+        "Empowering aspiring actors with technical skills, audition prep, and industry insights to ace every role.",
       Icon: Star,
     },
     {
-      title: "Production Support",
+      title: "Strategic Casting",
       description:
-        "End-to-end casting solutions from pre-production planning to final artist selection.",
+        "Bridging the gap between filmmakers and artists with a transparent, time-saving, and hassle-free process.",
       Icon: Award,
     },
   ];
@@ -39,28 +39,28 @@ function About() {
     {
       title: "Casting Directors",
       description:
-        "Experienced professionals who understand the nuances of character matching and industry requirements.",
+        "Visionary experts dedicated to finding the perfect face for every soul, ensuring a seamless match between the    script and the artist.",
       Image:
-        "https://plus.unsplash.com/premium_photo-1682146733343-eb0de7a744f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1598267416816-2fc7a6058eaa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Talent Scouts",
       description:
-        "Dedicated scouts who travel across India to discover hidden gems and fresh talent.",
+        "Our boots on the ground, traveling across India to discover hidden gems and fresh, authentic voices for the industry.",
       Image:
         "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Artist Coordinators",
+      title: "Casting Associates",
       description:
-        "Professional coordinators who manage artist schedules, contracts, and production logistics.",
+        "Professional bridge-makers who manage auditions, shortlist talent, and ensure smooth coordination between creators and actors.",
       Image:
         "https://images.unsplash.com/photo-1518930259200-3e5b29f42096?q=80&w=882&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Creative Consultants",
+      title: "Casting Assistants",
       description:
-        "Industry veterans who provide strategic guidance on casting choices and market trends.",
+        "Detail-oriented support team handling database management, scheduling, and day-to-day casting logistics efficiently.",
       Image:
         "https://images.unsplash.com/photo-1543242594-c8bae8b9e708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
@@ -78,41 +78,39 @@ function About() {
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
           </div>
-          <div
-           
-            className="max-w-8xl mx-auto"
-          >
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
-              At{" "}
-              <span className="font-semibold text-[var(--brand-secondary)]">
-                Jeevan Casting
-              </span>
-              , we don’t just cast actors — we discover{" "}
-              <span className="text-white font-semibold">dreams</span>, shape{" "}
-              <span className="text-white font-semibold">stories</span>, and
-              bring unforgettable characters to life.
-            </p>
+          <div className="max-w-8xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
+  Finding the perfect cast for a Director and the right script for an Actor
+  has long been a complex and time-consuming struggle. After entering
+  Bollywood in <span className="font-semibold">2017</span>, I experienced
+  these industry gaps firsthand.
+</p>
 
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
-              Since <span className="font-semibold">2017</span>, we have
-              connected{" "}
-              <span className="text-white font-semibold">talented artists</span>{" "}
-              with{" "}
-              <span className="text-white font-semibold">
-                visionary filmmakers
-              </span>
-              , helping create powerful on-screen experiences through thoughtful
-              casting.
-            </p>
+<p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
+  To solve this, we founded{" "}
+  <span className="font-semibold text-[var(--brand-secondary)]">
+    Jeevan Casting
+  </span>
+  . We have transformed the traditional casting hustle into a{" "}
+  <span className="text-white font-semibold">seamless</span>,{" "}
+  <span className="text-white font-semibold">transparent</span>, and{" "}
+  <span className="text-white font-semibold">time-efficient</span> process.
+</p>
 
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
-              From Bollywood productions and regional cinema to rapidly growing
-              OTT platforms, our work focuses on identifying authentic talent
-              and matching it with the right opportunities.
-            </p>
+<p className="text-sm sm:text-base md:text-lg leading-relaxed text-white/80 mt-3">
+  Our mission is to bridge the gap between{" "}
+  <span className="text-white font-semibold">visionary filmmakers</span> and{" "}
+  <span className="text-white font-semibold">authentic talent</span>, making
+  the journey from{" "}
+  <span className="font-semibold text-[var(--brand-secondary)]">
+    "Script to Screen"
+  </span>{" "}
+  faster and easier than ever.
+</p>
 
             <p className="text-base sm:text-lg md:text-xl font-semibold text-[var(--brand-secondary)] mt-5">
-              More than casting directors — we are dream makers.
+              Simplifying Casting, Amplifying Talent. Streamlining the Soul of
+              Every Script.
             </p>
           </div>
 
@@ -150,7 +148,7 @@ function About() {
           </div>
           <div className="m-10">
             <BouncyText
-              text={`Our Team Members`}
+              text={`Our Team`}
               className="text-2xl sm:text-4xl md:text-5xl text-white  px-4 mt-3 font-extrabold leading-tight text-center  "
             />
           </div>

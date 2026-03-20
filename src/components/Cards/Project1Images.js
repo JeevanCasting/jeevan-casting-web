@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import centerImage from "../../assests/projectImages/ad1cent.jpg";
+import tlImage from "../../assests/projectImages/ad1tl.jpg";
+import trImage from "../../assests/projectImages/ad1tr.jpg";
+import brImage from "../../assests/projectImages/ad1br.png";
 
-const ProjectImages = () => {
+const Project1Images = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -34,7 +38,7 @@ const ProjectImages = () => {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?q=80&w=1170&auto=format&fit=crop"
+              src={centerImage}
               alt="Main Project"
               loading="lazy"
               decoding="async"
@@ -50,13 +54,13 @@ const ProjectImages = () => {
           <div
             className="absolute top-[70px] left-[160px] lg:left-[140px]
                        border border-[var(--brand-secondary)] z-50
-                       w-[200px] h-[130px]"
+                       h-[200px] w-[160px]"
             style={{
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={tlImage}
               alt="Top Left"
               loading="lazy"
               className="w-full h-full object-cover"
@@ -73,24 +77,24 @@ const ProjectImages = () => {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1543242594-c8bae8b9e708?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={brImage}
               alt="Bottom Right"
               loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
 
-          {/* Extra Image */}
+           {/* top right */}
           <div
             className="absolute top-[60px] lg:right-[150px] right-[170px]
                        border border-[var(--brand-secondary)] z-30
-                       w-[160px] h-[100px]"
+                      h-[180px] w-[140px]"
             style={{
               boxShadow: "var(--shadow-glow-secondary)",
             }}
           >
             <img
-              src="https://plus.unsplash.com/premium_photo-1684923604035-93b39a3e6375?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={trImage}
               alt="Extra"
               loading="lazy"
               className="w-full h-full object-cover"
@@ -102,4 +106,4 @@ const ProjectImages = () => {
   );
 };
 
-export default ProjectImages;
+export default Project1Images;

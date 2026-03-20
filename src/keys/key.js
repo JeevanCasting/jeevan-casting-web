@@ -1,14 +1,14 @@
 
-// export const emailKeys = {
-//   serviceId: "service_zz8ryqu",
-//   templateId: "template_ybmpcvb",
-//   publicKey: "NKE4-2eKNQ0b7uNzN",
-// };
 export const emailKeys = {
-  serviceId: "test_service",
-  templateId: "test_template",
-  publicKey: "test_key",
+  serviceId: "service_zz8ryqu",
+  templateId: "template_ybmpcvb",
+  publicKey: "NKE4-2eKNQ0b7uNzN",
 };
+// export const emailKeys = {
+//   serviceId: "test_service",
+//   templateId: "test_template",
+//   publicKey: "test_key",
+// };
 
 export const validationRegex = {
   name: /^[a-zA-Z\s]{2,50}$/,

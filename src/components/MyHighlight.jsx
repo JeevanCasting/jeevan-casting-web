@@ -59,17 +59,16 @@ const MyHighlight = () => {
           </h2>
 
           <p className="mt-2 text-lg sm:text-xl text-white font-semibold">
-            Founder & Director
+            Founder & Casting Director
           </p>
 
           <p className="mt-4 text-sm sm:text-base text-white/70 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-            At{" "}
+            Led by{" "}
             <span className="text-[var(--brand-secondary)] font-semibold">
-              Jeevan Casting Company
+              Founder and Casting Director Abhishek Kumar (Jeevan),
             </span>
-            , we discover and nurture Bollywood talent with creativity,
-            professionalism, and excellence — connecting fresh faces with
-            powerful storytelling.
+           {" "}Jeevan Casting serves as a professional and transparent bridge in the filmmaking world, connecting visionary filmmakers with a diverse network of emerging and seasoned talent across India. We are dedicated to bringing every project’s vision to life through end-to-end casting solutions, fresh talent discovery, and professional acting workshops.
+
           </p>
 
           <button

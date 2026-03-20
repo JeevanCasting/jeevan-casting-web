@@ -16,19 +16,19 @@ const ProductCard1 = ({ title, description, image, category }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--brand-primary)]/80 to-transparent"></div>
           </div>
         )}
+ {/* Title */}
+        <h3 className="text-xl font-bold text-[var(--brand-secondary)]">{title}</h3>
 
         {/* Category */}
         {category && (
-          <span className="text-xs font-semibold text-[var(--brand-secondary)] uppercase tracking-wider">
+          <span className="text-xs font-semibold text-[var(--brand-secondary)] uppercase tracking-wider  mb-2">
             {category}
           </span>
         )}
 
-        {/* Title */}
-        <h3 className="text-xl font-bold text-[var(--brand-secondary)] mb-2">{title}</h3>
-
+       
         {/* Description */}
-        <p className="text-gray-200 text-sm leading-relaxed">{description}</p>
+        <p className="text-gray-200 text-sm leading-relaxed text-justify">{description}</p>
       </div>
     </div>
   );

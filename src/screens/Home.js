@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DemoCard from "../components/DemoCard";
 import HoverFlipCard from "../components/Cards/HoverFlipCard";
 import ClientCard from "../components/Cards/ClientCard";
-import ProjectImages from "../components/Cards/ProjectImages";
+import Project1Images from "../components/Cards/Project1Images";
 import BouncyText from "../components/BouncyText";
 import RadarSphere from "../components/RadarSphere";
 import HexagonGridBgHome from "../components/backgrounds/HexagonGridBgHome";
@@ -14,6 +14,7 @@ import MiniReelCard from "../components/Cards/MiniReelCard";
 import MyHighlight from "../components/MyHighlight";
 import OrbitReels from "../components/OrbitReels";
 import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
+import Project2Images from "../components/Cards/Project2Images";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -67,29 +68,32 @@ function Home() {
           {/* TEXT */}
           <div className="flex-1 pt-6 text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl xl:text-5xl font-extrabold tracking-tight text-white break-words">
-              Jeevan Casting Company — Spotlighting Talent, Shaping Dreams
+              Jeevan Casting Company — The Center of Refined Talent.
             </h1>
-
             <p className="mt-2 text-sm sm:text-base text-gray-300 break-words">
               by <span className="text-white/90">Jeevan Casting</span> —
               Bollywood • Films • Web Series • Ads
             </p>
-
             <p className="mt-4 text-base sm:text-lg md:text-xl font-semibold text-[var(--brand-secondary)] break-words">
-              Connecting <span className="text-white">actors, models,</span> and{" "}
-              <span className="text-white">performers</span> with the perfect
-              roles.
+              Pan-India Discovery.
+              <span className="text-white"> Precision Casting.</span> Aligning
+              Every
+              <span className="text-white"> Talent</span> with the Director’s
+              Vision.
             </p>
-
             <p className="mt-5 text-sm sm:text-base text-slate-300/90 max-w-2xl mx-auto lg:mx-0 break-words">
-              We help talent shine on screen by providing{" "}
-              <span className="text-white font-semibold">
-                audition opportunities
+              Jeevan Casting simplifies the journey between
+              <span className="text-white font-semibold ml-1">
+                talent and filmmakers.
               </span>
-              , portfolio showcases, and{" "}
-              <span className="text-white font-semibold">casting support</span>{" "}
-              for films, commercials, and web series—making dreams of Bollywood
-              stardom a reality.
+              With our Pan-India network,
+              <span className="text-white font-semibold">
+                {" "}
+                we scout fresh faces and seasoned actors
+              </span>{" "}
+              for films, web series, and ads. From end-to-end casting support to
+              professional workshops led by industry experts, we ensure every
+              artist is camera-ready and every project finds its perfect fit.
             </p>
 
             {/* BUTTONS */}
@@ -128,7 +132,7 @@ function Home() {
               />
             </div>
             <ServicesCarousel1 />
-             <div className="my-10">
+            <div className="my-10">
               <BouncyText
                 text="Stars We Wroked With"
                 className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
@@ -147,52 +151,74 @@ function Home() {
             {/* PROJECT 1 */}
             <div className="mt-12 flex flex-col lg:flex-row items-center gap-12 mx-auto">
               <div className="w-full lg:w-1/2 flex justify-center">
-                <ProjectImages />
+                <Project1Images />
               </div>
 
               <div className="w-full lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-xl sm:text-2xl font-bold text-white">
-                  Title of the Project
+                  Ad Casting : Bandhan Mutual Fund 1947
                 </h1>
 
                 <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
 
                 <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
-                  Empowering industries to operate smarter, safer, and more
-                  efficiently.{" "}
+                  Acting as a strategic partner to the director, we transformed
+                  a grand period vision into reality through nationwide talent
+                  scouting.{" "}
                   <span className="text-white font-semibold">
-                    Combining technology, creativity,
+                    Curating fresh and expressive faces,
                   </span>{" "}
-                  and{" "}
-                  <span className="text-white font-semibold">expertise,</span>{" "}
-                  we drive the future of industrial digitalization.
+                  we delivered a seamless and time-efficient casting process,
+                  bringing{" "}
+                  <span className="text-white font-semibold">
+                    authenticity and emotional depth
+                  </span>{" "}
+                  to this patriotic narrative.
                 </p>
-                <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
+                <a
+                  href="https://www.instagram.com/reel/DNTHI9UO8lF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold hover:bg-brand-secondary-hover hover:translate-y-[-1px] transition"
+                >
                   View Project
-                </div>
+                </a>
               </div>
             </div>
 
             {/* PROJECT 2 */}
             <div className="mt-16 flex flex-col lg:flex-row-reverse  items-center gap-12 mx-auto mb-10">
               <div className="w-full lg:w-1/2 flex justify-center">
-                <ProjectImages />
+                <Project2Images/>
               </div>
 
               <div className="w-full lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-xl sm:text-2xl font-bold text-white">
-                  Title of the Project
+                  Ad Casting : JK Super Cement
                 </h1>
 
-                <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
-
+                <p className="mt-2 text-gray-400 text-sm">Date: 2025-26</p>
                 <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
-                  Empowering industries to operate smarter, safer, and more
-                  efficiently.
+                  Solid casting for a solid brand. For JK Super Cement, we
+                  transformed the creative brief into a carefully curated lineup
+                  of authentic and expressive talent.{" "}
+                  <span className="text-white font-semibold">
+                    Guided by precision scouting and a deep alignment with the
+                    director’s vision,
+                  </span>{" "}
+                  we assembled a cast that truly reflects{" "}
+                  <span className="text-white font-semibold">
+                    strength, credibility, and excellence.
+                  </span>
                 </p>
-                <div className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition">
+                <a
+                  href="https://www.instagram.com/reel/DR4fiADjsay/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold hover:bg-brand-secondary-hover hover:translate-y-[-1px] transition"
+                >
                   View Project
-                </div>
+                </a>
               </div>
             </div>
             {/* <div className="my-10">

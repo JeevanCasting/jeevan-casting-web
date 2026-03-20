@@ -4,35 +4,29 @@ const journey = [
   {
     year: "2017-2018",
     title: "Entry Into Bollywood",
-    desc: "Debuted with a role in *Super 30*, marking the start of the film journey.",
+    desc: "Debut with Super 30, starting the journey to understand and simplify the casting process.",
   },
   {
     year: "2018-2019",
     title: "Building Experience",
-    desc: "Refined acting through auditions, workshops, and early projects.",
+    desc: "Refining the craft through extensive workshops and auditions to master acting technicalities",
   },
   {
     year: "2019-2020",
     title: "Industry Connections",
-    desc: "Built strong relationships with casting professionals and creators.",
+    desc: "Established strong networks with leading casting directors, actors, and filmmakers across the industry.",
   },
   {
-    year: "2020-2022",
-    title: "Versatile Performer",
-    desc: "Worked across ads and digital films, expanding on-screen presence.",
+    year: "2020-2024",
+    title: "Casting Expertise",
+    desc: "Collaborated on casting projects under industry-leading companies and top casting directors.",
   },
   {
-    year: "2022-2023",
+    year: "2024-Present",
     title: "Casting Initiative",
-    desc: "Supported emerging talent and assisted production casting.",
-  },
-  {
-    year: "2023-Present",
-    title: "Jeevan Casting Company",
-    desc: "Founded a company focused on discovering talent for Bollywood.",
+    desc: "Completed 200+ projects, providing expert casting for ads, films, and web series.",
   },
 ];
-
 
 function JourneyTimeline() {
   return (
@@ -41,7 +35,7 @@ function JourneyTimeline() {
         {journey.map((item, index) => (
           <div key={index} className="relative flex flex-col items-center">
             <div
-              className={`w-40 h-40 flex items-center justify-center
+              className={`w-50 h-50 flex items-center justify-center
                 ${
                   index % 2 === 0
                     ? "border-t-4 border-r-4"
@@ -49,11 +43,15 @@ function JourneyTimeline() {
                 }
                 border-dashed border-[var(--brand-secondary)]`}
             >
-              <div className="text-center px-3">
+              <div  className={`text-center px-3 ${
+                  index % 2 === 0
+                    ? "mt-2"
+                    : "mb-2"
+                }`}>
                 <h4 className="font-bold text-[var(--brand-secondary)]">
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-300 text-justify">
+                <p className="text-[12px] md:text-[13px] lg:text-[14px] text-gray-300 text-justify">
                   {item.desc}
                 </p>
               </div>

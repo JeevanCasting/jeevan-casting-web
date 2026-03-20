@@ -6,48 +6,38 @@ const ServicesCarousel1 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
 
+
+
+
   const services = [
     {
-      title: "Talent Discovery & Scouting",
+      title: "TALENT ACQUISITION",
       description:
-        "Nationwide talent hunting for fresh faces and experienced actors across all age groups and demographics.",
-      category: "Talent Acquisition",
+        "We conduct nationwide scouting for fresh talent and experienced performers, ensuring diversity and excellence in every cast. Beyond traditional casting, we actively scout real-life personalities, influencers, and unconventional faces to bring a unique, authentic energy to every project",
+      category: "Talent Discovery & Scouting",
       image:
         "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Casting Direction Services",
+      title: "CASTING DIRECTION & SERVICES",
       description:
-        "Expert casting direction for films, TV shows, and digital content with precise character matching.",
-      category: "Casting Direction",
+        "Jeevan Casting provides expert end-to-end solutions for Films, TV, and Ads. From research-driven films to urgent commercials, the agency ensures a 'perfect fit' within any timeline, connecting filmmakers with a diverse pool of established and fresh talent.",
+      category: "Precision | Smooth & Fast End-to-End Process",
       image:
         "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWV8ZW58MHx8MHx8fDA%3D",
     },
     {
-      title: "Artist Portfolio Development",
+      title: "ARTIST DEVELOPMENT & WORKSHOPS",
       description:
-        "Professional portfolio creation, headshots, and showreel development for aspiring artists.",
-      category: "Artist Development",
+        "Specialized camera and acting workshops led by industry-best trainers for aspiring talent and kids. We streamline the journey from audition techniques to final shoot execution, ensuring every actor is confident, professional, and industry-ready",
+      category: "Transforming Talent into Professionals",
       image:
         "https://images.unsplash.com/photo-1563341932-0c7e1870d40f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    {
-      title: "Audition Management",
-      description:
-        "Complete audition process management from scheduling to final selection for production houses.",
-      category: "Production Support",
-      image:
-        "https://plus.unsplash.com/premium_photo-1661675440353-6a6019c95bc7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW92aWV8ZW58MHx8MHx8fDA%3D",
-    },
-    {
-      title: "Celebrity Management",
-      description:
-        "End-to-end celebrity coordination, contract negotiations, and production logistics management.",
-      category: "Celebrity Services",
-      image:
-        "https://images.unsplash.com/photo-1619164816991-22d393238d8f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
   ];
+
+
+
 
   useEffect(() => {
     const handleResize = () => {
