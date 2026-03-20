@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function HexagonGridBgAbout() {
   const [projects, setProjects] = useState(0);
   const [talentNetwork, setTalentNetwork] = useState(0);
   const [team, setTeam] = useState(0);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let projectsTarget = 120;

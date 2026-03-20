@@ -1,4 +1,3 @@
-import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
 import Portfolio from "../components/Cards/Portfolio";
 import HexagonGridBgAbout from "../components/backgrounds/HexagonGridBgAbout";
 import IndustriesInfiniteSlider from "../components/Cards/IndustriesInfiniteSlider";

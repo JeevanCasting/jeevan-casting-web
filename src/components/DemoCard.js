@@ -207,24 +207,24 @@ export default function DemoCard() {
 
         {/* CTA */}
         <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="#"
+          <button
+            onClick={() => {}}
             className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 bg-[#ef0163] text-white font-semibold hover:translate-y-[-1px] hover:shadow-[0_10px_30px_rgba(239,1,99,0.35)] transition"
           >
             Download Datasheet
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M12 5v11m0 0l-4-4m4 4l4-4M5 19h14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
-          <a
-            href="#"
+          </button>
+          <button
+            onClick={() => {}}
             className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 border border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10 transition"
           >
             Get in Touch
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M5 12h14M13 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Footer from "../components/Footer";
 import HexagonGridBgContactus from "../components/backgrounds/HexagonGridBgContactus";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
 import emailjs from "@emailjs/browser";
