@@ -7,7 +7,6 @@ import BouncyText from "../components/BouncyText";
 import RadarSphere from "../components/RadarSphere";
 import HexagonGridBgHome from "../components/backgrounds/HexagonGridBgHome";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
-import ContactUsModal from "./ContactUsModal";
 import insta from "../assests/images/insta.png";
 import FlippingCardCarousel from "../components/Cards/FlippingCardCarousel";
 import MiniReelCard from "../components/Cards/MiniReelCard";
@@ -15,6 +14,7 @@ import MyHighlight from "../components/MyHighlight";
 import OrbitReels from "../components/OrbitReels";
 import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
 import Project2Images from "../components/Cards/Project2Images";
+import { NavLink, Link } from "react-router-dom";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -98,12 +98,13 @@ function Home() {
 
             {/* BUTTONS */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <button
-                onClick={() => setOpen(true)}
+             <Link
+         to="/submit-profile"
                 className="rounded-sm px-6 py-3 bg-[var(--brand-secondary)] text-black font-semibold shadow hover:opacity-90 transition"
               >
                 Submit Your Profile
-              </button>
+               </Link>
+
 
               <a
                 href="/contact"
@@ -132,18 +133,18 @@ function Home() {
               />
             </div>
             <ServicesCarousel1 />
-            <div className="my-10">
+            {/* <div className="my-10">
               <BouncyText
                 text="Stars We Wroked With"
                 className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
               />
-            </div>
-            <FlippingCardCarousel />
+            </div> */}
+            {/* <FlippingCardCarousel /> */}
 
             {/* PROJECT TITLE */}
             <div className="my-10">
               <BouncyText
-                text="A Quick Glimpse of Our Work"
+                text="A Glimpse of Our Work"
                 className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
               />
             </div>
@@ -235,8 +236,6 @@ function Home() {
       <section className="relative">
         <HexagonGridBgHome />
       </section>
-
-      <ContactUsModal isOpen={open} onClose={() => setOpen(false)} />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ContactUsModal from "../../screens/ContactUsModal";
-
+import { NavLink, Link } from "react-router-dom";
 function HexagonGridBgAbout() {
   const [projects, setProjects] = useState(0);
   const [talentNetwork, setTalentNetwork] = useState(0);
@@ -70,12 +69,12 @@ function HexagonGridBgAbout() {
             the soul it deserves.
           </p>
           <div>
-            <button
-              onClick={() => setOpen(true)}
+              <Link to="/submit-profile"
               className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold  hover:bg-brand-secondary-hover  hover:translate-y-[-1px] transition"
             >
               Join Us
-            </button>
+              </Link>
+
           </div>
         </div>
 
@@ -111,7 +110,6 @@ function HexagonGridBgAbout() {
           </ul>
         </div>
       </div>
-      <ContactUsModal isOpen={open} onClose={() => setOpen(false)} />
     </section>
   );
 }

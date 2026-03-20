@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assests/images/logo.png";
 import "./css/navBar.css";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ContactUsModal from "../screens/ContactUsModal";
 
 // Navigation config
 const navLinks = [
@@ -22,7 +21,6 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isContactModalOpen, setContactModalOpen] = useState(false);
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
@@ -61,8 +59,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button
-          onClick={() => setContactModalOpen(true)}
+        <Link
+          to="/submit-profile"
           className="hidden md:inline-flex group items-center gap-2 rounded-sm px-5 py-2 
              border border-brand-secondary-hover 
              text-black
@@ -71,20 +69,10 @@ const Navbar = () => {
              shadow-glow transition"
         >
           Get in Touch
-          <svg
-            className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              d="M5 12h14M13 5l7 7-7 7"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M5 12h14M13 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button onClick={toggleNavbar} className="menu-btn">
@@ -130,10 +118,6 @@ const Navbar = () => {
       )}
 
       {/* Overlay */}
-      <ContactUsModal
-        isOpen={isContactModalOpen}
-        onClose={() => setContactModalOpen(false)}
-      />
       {isOpen && <div className="overlay" onClick={toggleNavbar}></div>}
     </>
   );

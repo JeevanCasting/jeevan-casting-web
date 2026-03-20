@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ContactUsModal from "../../screens/ContactUsModal";
-
+import { NavLink, Link } from "react-router-dom";
 function Stat({ label, value, suffix = "+", duration = 1500 }) {
   const [count, setCount] = useState(0);
 
@@ -71,12 +70,13 @@ function HexagonGridBgHome() {
           A dedicated platform for professional talent acquisition. We connect fresh faces with major film and commercial projects through a streamlined scouting process. Submit your profile for active project shortlisting
         </p>
 
-        <button
-          onClick={() => setOpen(true)}
+          <Link
+         to="/submit-profile"
           className="group mt-4 inline-flex items-center gap-2 rounded-sm px-5 py-2 bg-[var(--brand-secondary)] text-black font-semibold hover:bg-brand-secondary-hover hover:translate-y-[-1px] transition"
         >
           Submit Your Profile
-        </button>
+         </Link>
+
 
         {/* Stats Grid */}
         <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -87,7 +87,6 @@ function HexagonGridBgHome() {
         </div>
       </div>
 
-      <ContactUsModal isOpen={open} onClose={() => setOpen(false)} />
     </section>
   );
 }
