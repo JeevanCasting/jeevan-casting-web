@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Stat({ label, value, suffix = "+", duration = 1500 }) {
   const [count, setCount] = useState(0);
 
@@ -29,7 +29,6 @@ function Stat({ label, value, suffix = "+", duration = 1500 }) {
 }
 
 function HexagonGridBgHome() {
-  const [open, setOpen] = useState(false);
 
   return (
     <section

@@ -94,7 +94,7 @@ const Single = ({ item, index }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-150, 150]);
   const [showMore, setShowMore] = useState(false);
 
-  const isOdd = index % 2 != 0;
+  const isOdd = index % 2 !== 0;
 
   return (
     <section className="h-auto flex items-center justify-center px-4 py-8">
@@ -243,7 +243,7 @@ const Portfolio = () => {
     offset: ["end end", "start start"],
   });
 
-  const scaleX = useSpring(scrollYProgress, {
+  useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
   });

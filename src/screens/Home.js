@@ -17,7 +17,6 @@ import Project2Images from "../components/Cards/Project2Images";
 import { NavLink, Link } from "react-router-dom";
 
 function Home() {
-  const [open, setOpen] = useState(false);
   const services = [
     {
       image: insta,

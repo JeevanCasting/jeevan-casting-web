@@ -2,84 +2,34 @@ import React from "react";
 
 const OrbitReels = () => {
 const clients = [
-  {
-    name: "Ad name 1",
-    image: "https://lh3.googleusercontent.com/d/1rZBoVRAjCg7Nik0o6lXgvVbzTQam2vYl",
-  },
-  {
-    name: "Ad name 2",
-    image: "https://lh3.googleusercontent.com/d/1jP93vLa3eH6e7Ao1_YbPJub1n5sbzar7",
-  },
-  {
-    name: "Ad name 3",
-    image: "https://lh3.googleusercontent.com/d/1OVLbUdokmzwR5Vlm66R0wWie4-aCPPs3",
-  },
-  {
-    name: "Ad name 4",
-    image: "https://lh3.googleusercontent.com/d/1Hc4OmG-2FvX0j9vjXug5WnmLV5AZydKt",
-  },
+  { name: "Ad 1", image: "https://lh3.googleusercontent.com/d/1rZBoVRAjCg7Nik0o6lXgvVbzTQam2vYl" },
+  { name: "Ad 2", image: "https://lh3.googleusercontent.com/d/1jP93vLa3eH6e7Ao1_YbPJub1n5sbzar7" },
+  { name: "Ad 3", image: "https://lh3.googleusercontent.com/d/1OVLbUdokmzwR5Vlm66R0wWie4-aCPPs3" },
+  { name: "Ad 4", image: "https://lh3.googleusercontent.com/d/1Hc4OmG-2FvX0j9vjXug5WnmLV5AZydKt" },
 
-  {
-    name: "Ad name 5",
-    image: "https://lh3.googleusercontent.com/d/1oa4OhFfDFfcS6sz9-3ytsyKeSAe9LA4l",
-  },
-  {
-    name: "Ad name 7",
-    image: "https://lh3.googleusercontent.com/d/1WqmV8aMkTcpbFTHfUJi2WdG416tx3Bcp",
-  },
-  {
-    name: "Ad name 8",
-    image: "https://lh3.googleusercontent.com/d/1LqZEMHhjS5lZHQegBSqaUawZcbpBa5X0",
-  },
-  {
-    name: "Ad name 9",
-    image: "https://lh3.googleusercontent.com/d/1F29AzYrde33llS7bf-Kq-ec09TEH3ijq",
-  },
-  {
-    name: "Ad name 10",
-    image: "https://lh3.googleusercontent.com/d/18mJIB0hSToaqEYWKO7YPW6nA0K1jkSfK",
-  },
-   {
-    name: "Ad name 1",
-    image: "https://lh3.googleusercontent.com/d/1rZBoVRAjCg7Nik0o6lXgvVbzTQam2vYl",
-  },
-  {
-    name: "Ad name 2",
-    image: "https://lh3.googleusercontent.com/d/1jP93vLa3eH6e7Ao1_YbPJub1n5sbzar7",
-  },
-  {
-    name: "Ad name 3",
-    image: "https://lh3.googleusercontent.com/d/1OVLbUdokmzwR5Vlm66R0wWie4-aCPPs3",
-  },
-  {
-    name: "Ad name 4",
-    image: "https://lh3.googleusercontent.com/d/1Hc4OmG-2FvX0j9vjXug5WnmLV5AZydKt",
-  },
+  { name: "Ad 5", image: "https://lh3.googleusercontent.com/d/1oa4OhFfDFfcS6sz9-3ytsyKeSAe9LA4l" },
+  { name: "Ad 6", image: "https://lh3.googleusercontent.com/d/1WqmV8aMkTcpbFTHfUJi2WdG416tx3Bcp" },
+  { name: "Ad 7", image: "https://lh3.googleusercontent.com/d/1LqZEMHhjS5lZHQegBSqaUawZcbpBa5X0" },
+  { name: "Ad 8", image: "https://lh3.googleusercontent.com/d/1F29AzYrde33llS7bf-Kq-ec09TEH3ijq" },
 
-  {
-    name: "Ad name 5",
-    image: "https://lh3.googleusercontent.com/d/1oa4OhFfDFfcS6sz9-3ytsyKeSAe9LA4l",
-  },
-  {
-    name: "Ad name 6",
-    image: "https://lh3.googleusercontent.com/d/18nQWoSpGpv-zSuZpXTGujRLi5lv3FdrT",
-  },
-  {
-    name: "Ad name 8",
-    image: "https://lh3.googleusercontent.com/d/1LqZEMHhjS5lZHQegBSqaUawZcbpBa5X0",
-  },
-  {
-    name: "Ad name 9",
-    image: "https://lh3.googleusercontent.com/d/1F29AzYrde33llS7bf-Kq-ec09TEH3ijq",
-  },
-  {
-    name: "Ad name 10",
-    image: "https://lh3.googleusercontent.com/d/18mJIB0hSToaqEYWKO7YPW6nA0K1jkSfK",
-  },
+  { name: "Ad 9", image: "https://lh3.googleusercontent.com/d/18mJIB0hSToaqEYWKO7YPW6nA0K1jkSfK" },
+  { name: "Ad 10", image: "https://lh3.googleusercontent.com/d/18nQWoSpGpv-zSuZpXTGujRLi5lv3FdrT" },
+
+  // repeat with spacing (after 3+ gap)
+  { name: "Ad 11", image: "https://lh3.googleusercontent.com/d/1rZBoVRAjCg7Nik0o6lXgvVbzTQam2vYl" },
+  { name: "Ad 12", image: "https://lh3.googleusercontent.com/d/1jP93vLa3eH6e7Ao1_YbPJub1n5sbzar7" },
+  { name: "Ad 13", image: "https://lh3.googleusercontent.com/d/1OVLbUdokmzwR5Vlm66R0wWie4-aCPPs3" },
+  { name: "Ad 14", image: "https://lh3.googleusercontent.com/d/1Hc4OmG-2FvX0j9vjXug5WnmLV5AZydKt" },
+
+  { name: "Ad 15", image: "https://lh3.googleusercontent.com/d/1oa4OhFfDFfcS6sz9-3ytsyKeSAe9LA4l" },
+  { name: "Ad 16", image: "https://lh3.googleusercontent.com/d/1WqmV8aMkTcpbFTHfUJi2WdG416tx3Bcp" },
+  { name: "Ad 17", image: "https://lh3.googleusercontent.com/d/1LqZEMHhjS5lZHQegBSqaUawZcbpBa5X0" },
+  { name: "Ad 18", image: "https://lh3.googleusercontent.com/d/1F29AzYrde33llS7bf-Kq-ec09TEH3ijq" },
+
+  { name: "Ad 19", image: "https://lh3.googleusercontent.com/d/18mJIB0hSToaqEYWKO7YPW6nA0K1jkSfK" },
+  { name: "Ad 20", image: "https://lh3.googleusercontent.com/d/18nQWoSpGpv-zSuZpXTGujRLi5lv3FdrT" },
 ];
-const shuffledClients = [...clients]
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 20);
+
   const radius = 560;
 
   return (
@@ -108,7 +58,7 @@ const shuffledClients = [...clients]
           transformOrigin: "center center",
         }}
       >
-        {shuffledClients.map((client, i) => {
+        {clients.map((client, i) => {
           const angle = (360 / clients.length) * i;
 
           return (
@@ -144,7 +94,6 @@ const shuffledClients = [...clients]
                   ))}
                 </div>
 
-                {/* NAME */}
                 {/* <div style={nameTag}>{client.name}</div> */}
               </div>
             </div>
@@ -213,14 +162,4 @@ const hole = {
   height: "6px",
   backgroundColor: "#333",
   borderRadius: "2px",
-};
-
-const nameTag = {
-  position: "absolute",
-  bottom: "8px",
-  left: "5px",
-  color: "#fff",
-  fontSize: "12px",
-  fontWeight: "600",
-  zIndex: 10,
 };
