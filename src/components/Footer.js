@@ -67,6 +67,7 @@ function Footer() {
             >
               <FaInstagram />
             </a>
+            
             <a
               href="https://www.facebook.com/jiwan.kumar.355138"
               target="_blank"
