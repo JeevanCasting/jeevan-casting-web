@@ -8,6 +8,7 @@ import OrbitReels from "../components/OrbitReels";
 import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
 import Project2Images from "../components/Cards/Project2Images";
 import { Link } from "react-router-dom";
+import FlippingCardCarousel from "../components/Cards/FlippingCardCarousel";
 
 function Home() {
   return (
@@ -90,7 +91,13 @@ function Home() {
               />
             </div>
             <ServicesCarousel1 />
-
+             <div className="my-10">
+              <BouncyText
+                text="Celebrities We Worked With"
+                className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
+              />
+            </div>
+             <FlippingCardCarousel/>
             <div className="my-10">
               <BouncyText
                 text="A Glimpse of Our Work"
