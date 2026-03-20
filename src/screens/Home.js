@@ -132,13 +132,13 @@ function Home() {
               />
             </div>
             <ServicesCarousel1 />
-            {/* <div className="my-10">
+            <div className="my-10">
               <BouncyText
                 text="Stars We Wroked With"
                 className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
               />
-            </div> */}
-            {/* <FlippingCardCarousel /> */}
+            </div> 
+           <FlippingCardCarousel />
 
             {/* PROJECT TITLE */}
             <div className="my-10">
