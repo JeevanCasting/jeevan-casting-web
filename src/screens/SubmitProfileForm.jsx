@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { emailKeys, validationRegex } from "../keys/key";
 import { LottieAlert } from "../components/lottie/LottieAlert";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
-import HexagonGridBgContactus from "../components/backgrounds/HexagonGridBgContactus";
 
 function SubmitProfileForm() {
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);

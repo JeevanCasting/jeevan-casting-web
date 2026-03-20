@@ -1,59 +1,41 @@
 import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const services = [
   {
     title: "Talent Discovery & Scouting",
     description:
       "We conduct nationwide scouting to discover a diverse range of fresh talent and experienced performers. Our approach is tailored to the script's demands, ensuring excellence in every cast through a modern, 360-degree scouting process",
-     pointSections: [{
+    pointSections: [{
       heading: "Our Talent Sources",
-       points: [
-      {
-        name: "Elite Database:",
-        desc: "Direct access to Celebrity, Known, and Semi-Known actors for high-impact roles.",
-      },
-      {
-        name: "The Best Trained Talent:",
-        desc: "A rigorous selection of professionally trained actors from top institutes and theater backgrounds.",
-      },
-      {
-        name: "Fresh Face Discovery:",
-        desc: "Constantly identifying new talent to bring a fresh perspective to the screen.",
-      },
-      {
-        name: "Real-Life Personalities (Non-Actors):",
-        desc: "Sourcing authentic individuals to provide a raw, natural feel to realistic cinema and ad films.",
-      },
-       {
-        name: "Digital Influencers:",
-        desc: "ntegrating influencers and digital creators to maximize reach and trend-driven engagement.",
-      },
-       {
-        name: "Pan-India Network:",
-        desc: "While we are deeply rooted in Mumbai, our scouting network extends across India to find the perfect cultural and linguistic match for your script.",
-      },
-    ],}],
+      points: [
+        { name: "Elite Database:", desc: "Direct access to Celebrity, Known, and Semi-Known actors for high-impact roles." },
+        { name: "The Best Trained Talent:", desc: "A rigorous selection of professionally trained actors from top institutes and theater backgrounds." },
+        { name: "Fresh Face Discovery:", desc: "Constantly identifying new talent to bring a fresh perspective to the screen." },
+        { name: "Real-Life Personalities (Non-Actors):", desc: "Sourcing authentic individuals to provide a raw, natural feel to realistic cinema and ad films." },
+        { name: "Digital Influencers:", desc: "Integrating influencers and digital creators to maximize reach and trend-driven engagement." },
+        { name: "Pan-India Network:", desc: "While we are deeply rooted in Mumbai, our scouting network extends across India to find the perfect cultural and linguistic match for your script." },
+      ],
+    }],
     category: "Talent Acquisition",
-    image:
-      "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Casting Direction & Services",
     subtitle: "Precision | Speed | End-to-End Excellence",
     description:
       "Jeevan Casting delivers expert, comprehensive casting solutions tailored for Feature Films, OTT Series, and High-Impact Commercials. We understand that in the fast-paced world of production, timing is as critical as the talent itself. Our agency specializes in a research-driven approach, ensuring every character is more than just a face—they are a perfect performance match.",
-     pointSections: [{
+    pointSections: [{
       heading: "",
       points: [
-      { name: "Strategic Research:", desc: "We dive deep into the script to understand the nuances of every role." },
-      { name: "Rapid Turnaround:", desc: "Optimized for the ad world, we provide high-quality shortlisting within the tightest deadlines." },
-      { name: "Complete Process Management:", desc: "From initial brief and scouting to screen tests, final shortlisting, and contract coordination." },
-      { name: "Diverse Talent Pool:", desc: "Instant access to a curated network of established stars, trained actors, and fresh discoveries." },
-    ],},],
+        { name: "Strategic Research:", desc: "We dive deep into the script to understand the nuances of every role." },
+        { name: "Rapid Turnaround:", desc: "Optimized for the ad world, we provide high-quality shortlisting within the tightest deadlines." },
+        { name: "Complete Process Management:", desc: "From initial brief and scouting to screen tests, final shortlisting, and contract coordination." },
+        { name: "Diverse Talent Pool:", desc: "Instant access to a curated network of established stars, trained actors, and fresh discoveries." },
+      ],
+    }],
     category: "Casting Direction",
-    image:
-      "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Artist Development & Workshops",
@@ -83,8 +65,7 @@ const services = [
       },
     ],
     category: "Artist Development",
-    image:
-      "https://images.unsplash.com/photo-1570834322056-ba3e2994ab85?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1570834322056-ba3e2994ab85?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -94,7 +75,7 @@ const Single = ({ item, index }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-150, 150]);
   const [showMore, setShowMore] = useState(false);
 
-  const isOdd = index % 2 != 0;
+  const isOdd = index % 2 !== 0;
 
   return (
     <section className="h-auto flex items-center justify-center px-4 py-8">
@@ -106,72 +87,35 @@ const Single = ({ item, index }) => {
         {/* Image */}
         <motion.div
           ref={ref}
-          style={{
-            y: typeof window !== "undefined" && window.innerWidth > 768 ? y : 0,
-          }}
+          style={{ y: typeof window !== "undefined" && window.innerWidth > 768 ? y : 0 }}
           className="flex-1 flex justify-center"
         >
           <div className="relative group">
-            {/* LEFT film holes */}
             <div className="absolute -left-6 top-0 h-full hidden border border-[var(--brand-secondary-hover)] p-1 sm:flex flex-col justify-between py-3">
               {[...Array(7)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]"
-                />
+                <div key={i} className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]" />
               ))}
             </div>
-
-            {/* RIGHT film holes */}
             <div className="absolute -right-6 top-0 h-full hidden border border-[var(--brand-secondary-hover)] p-1 sm:flex flex-col justify-between py-3">
               {[...Array(7)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]"
-                />
+                <div key={i} className="w-3 h-8 bg-[var(--brand-secondary)] rounded-sm opacity-80 shadow-[0_0_8px_rgba(255,248,41,0.6)]" />
               ))}
             </div>
-
-            {/* IMAGE FRAME */}
-            <div
-              className="
-        relative
-        overflow-hidden
-        bg-black
-        rounded-sm
-        border border-white/10
-        shadow-[0_0_40px_rgba(255,248,41,0.15)]
-        group-hover:shadow-[0_0_80px_rgba(255,248,41,0.35)]
-        transition-all
-        duration-500
-      "
-            >
+            <div className="relative overflow-hidden bg-black rounded-sm border border-white/10 shadow-[0_0_40px_rgba(255,248,41,0.15)] group-hover:shadow-[0_0_80px_rgba(255,248,41,0.35)] transition-all duration-500">
               <img
                 src={item.image}
                 alt={item.title}
-                className="
-          w-full
-          max-w-[520px]
-          aspect-[16/9]
-          object-cover
-          group-hover:scale-110
-          transition-transform
-          duration-700
-        "
+                className="w-full max-w-[520px] aspect-[16/9] object-cover group-hover:scale-110 transition-transform duration-700"
               />
-
-              {/* Cinematic gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/50"></div>
             </div>
           </div>
         </motion.div>
 
         {/* Text */}
-        <div className="flex-1 flex flex-col gap-6 text-white p-4 md:p-0 text-center md:text-left ">
-          <h4 className="text-[var(--brand-secondary)] font-semibold">
-            {item.category}
-          </h4>
-          <h2 className="text-2xl md:text-4xl font-bold ">{item.title}</h2>
+        <div className="flex-1 flex flex-col gap-6 text-white p-4 md:p-0 text-center md:text-left">
+          <h4 className="text-[var(--brand-secondary)] font-semibold">{item.category}</h4>
+          <h2 className="text-2xl md:text-4xl font-bold">{item.title}</h2>
           {item.subtitle && (
             <p className="text-[var(--brand-secondary)] text-sm font-semibold tracking-widest uppercase">
               {item.subtitle}
@@ -181,11 +125,8 @@ const Single = ({ item, index }) => {
             {item.description}
           </p>
 
-
-          {/* Learn More toggle for service 3 */}
           {item.pointSections && (
             <>
-             
               <AnimatePresence>
                 {showMore && (
                   <motion.div
@@ -216,7 +157,7 @@ const Single = ({ item, index }) => {
                   </motion.div>
                 )}
               </AnimatePresence>
-               <button
+              <button
                 onClick={() => setShowMore(!showMore)}
                 className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition mx-auto md:mx-0"
               >
@@ -238,18 +179,10 @@ const Single = ({ item, index }) => {
 
 const Portfolio = () => {
   const ref = useRef();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["end end", "start start"] });
 
   return (
-    <div className="portfolio relative" ref={ref}>
+    <div className="portfolio relative" ref={ref} style={{ "--scroll": scrollYProgress }}>
       <div className="max-w-6xl mx-auto py-10">
         {services.map((item, idx) => (
           <Single key={idx} item={item} index={idx} />

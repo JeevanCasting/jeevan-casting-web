@@ -1,55 +1,19 @@
-import React, { useState } from "react";
-import DemoCard from "../components/DemoCard";
-import HoverFlipCard from "../components/Cards/HoverFlipCard";
-import ClientCard from "../components/Cards/ClientCard";
+import React from "react";
 import Project1Images from "../components/Cards/Project1Images";
 import BouncyText from "../components/BouncyText";
-import RadarSphere from "../components/RadarSphere";
 import HexagonGridBgHome from "../components/backgrounds/HexagonGridBgHome";
 import AnimatedCanvas from "../components/backgrounds/AnimatedCanvas";
-import insta from "../assests/images/insta.png";
-import FlippingCardCarousel from "../components/Cards/FlippingCardCarousel";
-import MiniReelCard from "../components/Cards/MiniReelCard";
 import MyHighlight from "../components/MyHighlight";
 import OrbitReels from "../components/OrbitReels";
 import ServicesCarousel1 from "../components/Cards/ServicesCarousel1";
 import Project2Images from "../components/Cards/Project2Images";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const [open, setOpen] = useState(false);
-  const services = [
-    {
-      image: insta,
-      title: "AI-Powered Solutions",
-      description:
-        "We design and deploy AI-driven ecosystems that transform the way businesses operate, making processes faster, smarter, and more efficient.",
-      backText:
-        "From predictive analytics and computer vision to natural language processing and automation, our AI-powered solutions are built to adapt and scale with your business needs. We don’t just deliver tools; we deliver intelligence that empowers decision-making and drives sustainable growth.",
-    },
-    {
-      image: insta,
-      title: "Smart Surveillance",
-      description:
-        "Next-generation monitoring systems that combine security, intelligence, and scalability to protect assets and ensure peace of mind.",
-      backText:
-        "Our surveillance solutions go beyond traditional monitoring — integrating AI, IoT, and real-time analytics to provide actionable insights. Whether it’s smart cities, enterprises, or industrial infrastructure, we deliver systems that evolve with changing threats and create safer environments.",
-    },
-    {
-      image: insta,
-      title: "Web & App Development",
-      description:
-        "We build powerful, modern, and scalable applications that deliver seamless experiences across web and mobile platforms.",
-      backText:
-        "Using cutting-edge technologies like React, Next.js, Spring Boot, and cloud-native systems, we create applications that are not just functional but future-ready. Our solutions are designed to handle scale, performance, and reliability while keeping user experience at the core.",
-    },
-  ];
-
   return (
     <div className="bg-[var(--brand-primary)] overflow-x-hidden lg:pt-0">
       {/* HERO SECTION */}
       <div className="relative flex justify-center">
-        {/* Background video */}
         <video
           autoPlay
           muted
@@ -60,12 +24,9 @@ function Home() {
           <source src="/aivideo.mp4" type="video/mp4" />
         </video>
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/30"></div>
 
-        {/* CONTENT */}
-        <div className="relative w-full max-w-7xl  p-4 sm:p-6 lg:p-10 pb-20 flex flex-col lg:flex-row items-center gap-10 z-10">
-          {/* TEXT */}
+        <div className="relative w-full max-w-7xl p-4 sm:p-6 lg:p-10 pb-20 flex flex-col lg:flex-row items-center gap-10 z-10">
           <div className="flex-1 pt-6 text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl xl:text-5xl font-extrabold tracking-tight text-white break-words">
               Jeevan Casting Company — The Center of Refined Talent.
@@ -78,14 +39,14 @@ function Home() {
               Pan-India Discovery.
               <span className="text-white"> Precision Casting.</span> Aligning
               Every
-              <span className="text-white"> Talent</span> with the Director’s
+              <span className="text-white"> Talent</span> with the Director's
               Vision.
             </p>
             <p className="mt-5 text-sm sm:text-base text-slate-300/90 max-w-2xl mx-auto lg:mx-0 break-words">
               Jeevan Casting simplifies the journey between
               <span className="text-white font-semibold ml-1">
                 talent and filmmakers.
-              </span>
+              </span>{" "}
               With our Pan-India network,
               <span className="text-white font-semibold">
                 {" "}
@@ -96,16 +57,13 @@ function Home() {
               artist is camera-ready and every project finds its perfect fit.
             </p>
 
-            {/* BUTTONS */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-             <Link
-         to="/submit-profile"
+              <Link
+                to="/submit-profile"
                 className="rounded-sm px-6 py-3 bg-[var(--brand-secondary)] text-black font-semibold shadow hover:opacity-90 transition"
               >
                 Submit Your Profile
-               </Link>
-
-
+              </Link>
               <a
                 href="/contact"
                 className="rounded-sm px-5 py-3 border border-white/20 text-white hover:bg-white/5 transition"
@@ -118,14 +76,13 @@ function Home() {
       </div>
 
       {/* SECOND SECTION */}
-      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center ">
+      <section className="relative min-h-[100dvh] flex flex-col items-center justify-center">
         <AnimatedCanvas />
         <div className="absolute inset-0 z-10 backdrop-blur-md px-4"></div>
 
         <div className="relative z-20 text-white text-center w-full">
           <MyHighlight />
           <div className="max-w-8xl mx-auto sm:px-6 lg:px-16 pb-16">
-            {/* MEET US */}
             <div className="my-10">
               <BouncyText
                 text="What We do ?"
@@ -133,15 +90,7 @@ function Home() {
               />
             </div>
             <ServicesCarousel1 />
-            {/* <div className="my-10">
-              <BouncyText
-                text="Stars We Wroked With"
-                className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
-              />
-            </div> */}
-            {/* <FlippingCardCarousel /> */}
 
-            {/* PROJECT TITLE */}
             <div className="my-10">
               <BouncyText
                 text="A Glimpse of Our Work"
@@ -154,14 +103,11 @@ function Home() {
               <div className="w-full lg:w-1/2 flex justify-center">
                 <Project1Images />
               </div>
-
               <div className="w-full lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-xl sm:text-2xl font-bold text-white">
                   Ad Casting : Bandhan Mutual Fund 1947
                 </h1>
-
                 <p className="mt-2 text-gray-400 text-sm">Date: 2024-25</p>
-
                 <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
                   Acting as a strategic partner to the director, we transformed
                   a grand period vision into reality through nationwide talent
@@ -188,16 +134,14 @@ function Home() {
             </div>
 
             {/* PROJECT 2 */}
-            <div className="mt-16 flex flex-col lg:flex-row-reverse  items-center gap-12 mx-auto mb-10">
+            <div className="mt-16 flex flex-col lg:flex-row-reverse items-center gap-12 mx-auto mb-10">
               <div className="w-full lg:w-1/2 flex justify-center">
-                <Project2Images/>
+                <Project2Images />
               </div>
-
               <div className="w-full lg:w-1/2 text-center lg:text-left">
                 <h1 className="text-xl sm:text-2xl font-bold text-white">
                   Ad Casting : JK Super Cement
                 </h1>
-
                 <p className="mt-2 text-gray-400 text-sm">Date: 2025-26</p>
                 <p className="mt-5 text-sm sm:text-base text-slate-300 break-words">
                   Solid casting for a solid brand. For JK Super Cement, we
@@ -205,7 +149,7 @@ function Home() {
                   of authentic and expressive talent.{" "}
                   <span className="text-white font-semibold">
                     Guided by precision scouting and a deep alignment with the
-                    director’s vision,
+                    director's vision,
                   </span>{" "}
                   we assembled a cast that truly reflects{" "}
                   <span className="text-white font-semibold">
@@ -222,12 +166,7 @@ function Home() {
                 </a>
               </div>
             </div>
-            {/* <div className="my-10">
-            <BouncyText
-              text="Gallery"
-              className="text-2xl sm:text-4xl md:text-5xl font-extrabold"
-            />
-          </div> */}
+
             <OrbitReels />
           </div>
         </div>
