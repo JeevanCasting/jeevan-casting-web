@@ -77,6 +77,9 @@ const clients = [
     image: "https://lh3.googleusercontent.com/d/18mJIB0hSToaqEYWKO7YPW6nA0K1jkSfK",
   },
 ];
+const shuffledClients = [...clients]
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 20);
   const radius = 560;
 
   return (

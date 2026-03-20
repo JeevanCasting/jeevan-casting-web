@@ -65,11 +65,10 @@ function HexagonGridBgHome() {
 
       <div className="relative z-10 w-full max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-          Trusted Casting. Proven Talent.
+         Every Superstar Was Once a Fresh Face
         </h2>
         <p className="mt-3 md:mt-4 text-sm md:text-lg text-white/80 max-w-3xl mx-auto">
-          Jeevan Casting Company brings aspiring actors, models, and performers
-          to Bollywood, films, commercials, and web series.
+          A dedicated platform for professional talent acquisition. We connect fresh faces with major film and commercial projects through a streamlined scouting process. Submit your profile for active project shortlisting
         </p>
 
         <button
@@ -81,9 +80,9 @@ function HexagonGridBgHome() {
 
         {/* Stats Grid */}
         <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <Stat label="Talent Profiles" value={500} suffix="+" duration={1600} />
-          <Stat label="Bollywood Projects" value={120} suffix="+" duration={1700} />
-          <Stat label="Auditions Held" value={300} suffix="+" duration={1800} />
+          <Stat label="Talent Profiles" value={100} suffix="K+" duration={1600} />
+          <Stat label="Projects Completed" value={200} suffix="+" duration={1700} />
+          <Stat label="Auditions Held" value={500} suffix="K+" duration={1800} />
           <Stat label="Success Rate" value={95} suffix="%" duration={2000} />
         </div>
       </div>

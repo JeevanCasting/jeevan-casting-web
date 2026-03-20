@@ -1,46 +1,90 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 
 const services = [
   {
     title: "Talent Discovery & Scouting",
     description:
-      "Comprehensive nationwide talent hunting services to discover fresh faces and experienced actors across all age groups and demographics. Our expert scouts travel across India to identify unique talents that match specific character requirements for various entertainment projects.",
+      "We conduct nationwide scouting to discover a diverse range of fresh talent and experienced performers. Our approach is tailored to the script's demands, ensuring excellence in every cast through a modern, 360-degree scouting process",
+     pointSections: [{
+      heading: "Our Talent Sources",
+       points: [
+      {
+        name: "Elite Database:",
+        desc: "Direct access to Celebrity, Known, and Semi-Known actors for high-impact roles.",
+      },
+      {
+        name: "The Best Trained Talent:",
+        desc: "A rigorous selection of professionally trained actors from top institutes and theater backgrounds.",
+      },
+      {
+        name: "Fresh Face Discovery:",
+        desc: "Constantly identifying new talent to bring a fresh perspective to the screen.",
+      },
+      {
+        name: "Real-Life Personalities (Non-Actors):",
+        desc: "Sourcing authentic individuals to provide a raw, natural feel to realistic cinema and ad films.",
+      },
+       {
+        name: "Digital Influencers:",
+        desc: "ntegrating influencers and digital creators to maximize reach and trend-driven engagement.",
+      },
+       {
+        name: "Pan-India Network:",
+        desc: "While we are deeply rooted in Mumbai, our scouting network extends across India to find the perfect cultural and linguistic match for your script.",
+      },
+    ],}],
     category: "Talent Acquisition",
     image:
       "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Casting Direction Services",
+    title: "Casting Direction & Services",
+    subtitle: "Precision | Speed | End-to-End Excellence",
     description:
-      "Professional casting direction for films, television shows, web series, and digital content with precise character matching. Our experienced casting directors understand the nuances of storytelling and ensure perfect artist-character alignment for memorable performances.",
+      "Jeevan Casting delivers expert, comprehensive casting solutions tailored for Feature Films, OTT Series, and High-Impact Commercials. We understand that in the fast-paced world of production, timing is as critical as the talent itself. Our agency specializes in a research-driven approach, ensuring every character is more than just a face—they are a perfect performance match.",
+     pointSections: [{
+      heading: "",
+      points: [
+      { name: "Strategic Research:", desc: "We dive deep into the script to understand the nuances of every role." },
+      { name: "Rapid Turnaround:", desc: "Optimized for the ad world, we provide high-quality shortlisting within the tightest deadlines." },
+      { name: "Complete Process Management:", desc: "From initial brief and scouting to screen tests, final shortlisting, and contract coordination." },
+      { name: "Diverse Talent Pool:", desc: "Instant access to a curated network of established stars, trained actors, and fresh discoveries." },
+    ],},],
     category: "Casting Direction",
     image:
       "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    title: "Artist Portfolio Development",
+    title: "Artist Development & Workshops",
+    subtitle: "Transforming Talent into Professionals",
     description:
-      "Complete artist development services including professional portfolio creation, high-quality headshots, showreel production, and career guidance. We help aspiring artists build compelling profiles that showcase their versatility and talent to industry professionals.",
+      "A great performance is built on preparation. At Jeevan Casting, we don't just find talent; we nurture it. Our specialized Acting, Camera, and Casting Workshops are designed to bridge the gap between 'aspiring' and 'professional'. Led by the industry's finest trainers, we ensure every artist—from kids to adults—is equipped to handle the pressure of a real set with confidence.",
+    pointSections: [
+      {
+        heading: "Our Training Expertise",
+        points: [
+          { name: "Acting & Performance Mastery:", desc: "Focus on emotional range, dialogue delivery, and character building led by seasoned trainers." },
+          { name: "Specialized Casting Workshops:", desc: "Exclusive sessions that teach you how to decode a character brief and what casting directors actually look for." },
+          { name: "Camera & Technical Comfort:", desc: "Real-time workshops to help actors understand camera angles, lighting, and hit their marks with precision." },
+          { name: "Kids' Special Program:", desc: "Nurturing young talent in a fun yet professional environment to build confidence for ads and films." },
+          { name: "Audition Techniques:", desc: "Specialized modules on mastering self-tapes, slate/intro videos, and cracking live auditions." },
+        ],
+      },
+      {
+        heading: "Key Benefits of Our Workshops",
+        points: [
+          { name: "Direct Industry Insight:", desc: "Gain a professional understanding of how the casting process works in Bollywood and the Ad world." },
+          { name: "Performance Polishing:", desc: "Get personalized feedback to improve your body language and on-camera presence." },
+          { name: "Audition Ready:", desc: "Walk away with the skills to create professional-grade self-tapes that get noticed." },
+          { name: "Professional Networking:", desc: "Get a chance to be in the direct database of Jeevan Casting for upcoming prestigious projects." },
+          { name: "Confidence Building:", desc: "Overcome camera shyness and performance anxiety through regular mock-audition sessions." },
+        ],
+      },
+    ],
     category: "Artist Development",
     image:
       "https://images.unsplash.com/photo-1570834322056-ba3e2994ab85?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Audition Management",
-    description:
-      "End-to-end audition process management from initial scheduling to final artist selection for production houses. Our systematic approach ensures efficient audition workflows, proper documentation, and seamless coordination between artists and production teams.",
-    category: "Production Support",
-    image:
-      "https://plus.unsplash.com/premium_photo-1664302907956-bfb009c075fd?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Celebrity Management",
-    description:
-      "Comprehensive celebrity coordination services including contract negotiations, scheduling management, and production logistics. We handle all aspects of celebrity engagement to ensure smooth collaboration between stars and production houses for successful project completion.",
-    category: "Celebrity Services",
-    image:
-      "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -48,6 +92,7 @@ const Single = ({ item, index }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useTransform(scrollYProgress, [0, 1], [-150, 150]);
+  const [showMore, setShowMore] = useState(false);
 
   const isOdd = index % 2 != 0;
 
@@ -127,12 +172,56 @@ const Single = ({ item, index }) => {
             {item.category}
           </h4>
           <h2 className="text-2xl md:text-4xl font-bold ">{item.title}</h2>
+          {item.subtitle && (
+            <p className="text-[var(--brand-secondary)] text-sm font-semibold tracking-widest uppercase">
+              {item.subtitle}
+            </p>
+          )}
           <p className="text-base md:text-lg text-gray-200 font-light text-justify leading-relaxed">
             {item.description}
           </p>
-          <button className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition mx-auto md:mx-0">
-            Learn More
-          </button>
+
+
+          {/* Learn More toggle for service 3 */}
+          {item.pointSections && (
+            <>
+             
+              <AnimatePresence>
+                {showMore && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden space-y-6"
+                  >
+                    {item.pointSections.map((section, si) => (
+                      <div key={si}>
+                        <h4 className="text-[var(--brand-secondary)] font-bold mb-2">{section.heading}</h4>
+                        <ul className="space-y-1 text-sm text-gray-300">
+                          {section.points.map((p, pi) => (
+                            <li key={pi}><span className="font-semibold text-white">{p.name}</span> {p.desc}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+               <button
+                onClick={() => setShowMore(!showMore)}
+                className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition mx-auto md:mx-0"
+              >
+                {showMore ? "Show Less" : "Learn More"}
+              </button>
+            </>
+          )}
+
+          {!item.pointSections && (
+            <button className="w-40 md:w-48 px-6 py-2 bg-[var(--brand-secondary)] text-[var(--brand-primary)] font-semibold rounded-sm hover:bg-[var(--brand-secondary-hover)] transition mx-auto md:mx-0">
+              Learn More
+            </button>
+          )}
         </div>
       </div>
     </section>
