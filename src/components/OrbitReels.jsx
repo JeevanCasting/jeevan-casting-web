@@ -108,7 +108,7 @@ const shuffledClients = [...clients]
           transformOrigin: "center center",
         }}
       >
-        {clients.map((client, i) => {
+        {shuffledClients.map((client, i) => {
           const angle = (360 / clients.length) * i;
 
           return (

@@ -77,27 +77,28 @@ function Services() {
           {/* Value Proposition */}
           <div className="py-4">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-              {[
+              {
+              [
                 {
-                  icon: "🎭",
-                  title: "Complete Casting Partner",
-                  desc: "End-to-end casting solutions from auditions to final selection",
-                },
-                {
-                  icon: "🌟",
-                  title: "Talent Discovery",
-                  desc: "Nationwide scouting for fresh faces and seasoned performers",
-                },
-                {
-                  icon: "🎬",
-                  title: "Industry Expertise",
-                  desc: "Deep understanding of Bollywood, regional, and OTT requirements",
-                },
-                {
-                  icon: "🏆",
-                  title: "Proven Track Record",
-                  desc: "Successfully cast 500+ projects across multiple platforms",
-                },
+    icon: "🎭",
+    title: "Complete Casting Partner",
+    desc: "From first brief to final cut, we manage the entire talent journey.",
+  },
+  {
+    icon: "⭐",
+    title: "Talent Discovery",
+    desc: "Scouting the unseen—finding fresh faces and iconic personalities nationwide.",
+  },
+  {
+    icon: "🎬",
+    title: "Acting & Casting Workshops",
+    desc: "Turning aspirants into professionals with camera-ready skills and audition mastery.",
+  },
+  {
+    icon: "🏆",
+    title: "Proven Track Record",
+    desc: "Trusted for 200+ successful projects across Films, OTT, and Commercials.",
+  },
               ].map((item, i) => (
                 <div key={i}>
                   <div className="w-16 h-16 bg-[var(--brand-secondary)] rounded-full flex items-center justify-center mx-auto mb-4">

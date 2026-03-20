@@ -14,7 +14,7 @@ function ContactUsModal({ isOpen, onClose }) {
     height: "",
     age: "",
     gender: "",
-    weight: "",
+    home_state: "",
     location: "",
     intro_url: "",
     social_url: "",
@@ -31,7 +31,7 @@ function ContactUsModal({ isOpen, onClose }) {
     const height = formData.get('user_height')?.trim();
     const age = formData.get('user_age')?.trim();
     const gender = formData.get('user_gender');
-    const weight = formData.get('user_weight')?.trim();
+    const home_state = formData.get('user_home_state')?.trim();
     const location = formData.get('user_location')?.trim();
     const introUrl = formData.get('user_intro_url')?.trim();
     const socialUrl = formData.get('user_social_url')?.trim();
@@ -51,8 +51,7 @@ function ContactUsModal({ isOpen, onClose }) {
     
     if (!gender) newErrors.gender = "Gender is required";
     
-    if (!weight) newErrors.weight = "Weight is required";
-    else if (!validationRegex.weight.test(weight)) newErrors.weight = "Weight should be numeric (e.g., 65.5)";
+    if (!home_state) newErrors.home_state = "Home State is required";
     
     if (!location) newErrors.location = "Location is required";
     
@@ -83,7 +82,7 @@ function ContactUsModal({ isOpen, onClose }) {
       user_gender: formData.get('user_gender')|| 'Not Available',
       user_height: formData.get('user_height')|| 'Not Available',
       user_age: formData.get('user_age')|| 'Not Available',
-      user_weight: formData.get('user_weight')||'Not Available',
+      user_home_state: formData.get('user_home_state')||'Not Available',
       user_location: formData.get('user_location')||'Not Available',
       user_intro_url: formData.get('user_intro_url')||'Not Available',
       user_social_url: formData.get('user_social_url') || 'Not provided',
@@ -131,7 +130,7 @@ function ContactUsModal({ isOpen, onClose }) {
     p-4 md:p-6
     text-white
     backdrop-blur-md
-    bg-gradient-to-br from-yellow-400/10 via-[var(--brand-accent)]/5 to-transparent
+    bg-black
   ">   <button
           type="button"
           onClick={(e) => {
@@ -225,23 +224,23 @@ function ContactUsModal({ isOpen, onClose }) {
               {errors.gender && <p className="text-red-400 text-xs mt-1">{errors.gender}</p>}
             </div>
             <div>
-              <label className="block text-sm mb-1 text-gray-300">Weight in kg <span className="text-red-500">*</span></label>
+              <label className="block text-sm mb-1 text-gray-300">Home State <span className="text-red-500">*</span></label>
               <input
                 type="text"
-                name="user_weight"
-                placeholder="e.g., 65.5"
+                name="user_home_state"
+                placeholder="e.g., Maharashtra"
                 required
                 className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
               />
-              {errors.weight && <p className="text-red-400 text-xs mt-1">{errors.weight}</p>}
+              {errors.home_state && <p className="text-red-400 text-xs mt-1">{errors.home_state}</p>}
             </div>
           </div>
           <div>
-            <label className="block text-sm mb-1 text-gray-300">Location <span className="text-red-500">*</span></label>
+            <label className="block text-sm mb-1 text-gray-300">Current Location - City <span className="text-red-500">*</span></label>
             <input
               type="text"
               name="user_location"
-              placeholder="Enter Location E.g Country, State, City"
+              placeholder="Enter your current city"
               required
               className="w-full px-3 py-2 rounded-sm bg-white/5 border border-gray-500/30 text-white focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
             />

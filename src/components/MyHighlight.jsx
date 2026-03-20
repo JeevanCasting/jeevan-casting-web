@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const MyHighlight = () => {
@@ -71,7 +72,8 @@ const MyHighlight = () => {
 
           </p>
 
-          <button
+          <Link
+            to="/about"
             className="
             mt-6
             inline-flex
@@ -90,7 +92,7 @@ const MyHighlight = () => {
           "
           >
             More About Us
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

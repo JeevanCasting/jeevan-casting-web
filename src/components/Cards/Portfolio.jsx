@@ -97,7 +97,7 @@ const Single = ({ item, index }) => {
   const isOdd = index % 2 != 0;
 
   return (
-    <section className="h-auto md:h-[80vh] flex items-center justify-center px-4 py-4 md:py-0">
+    <section className="h-auto flex items-center justify-center px-4 py-8">
       <div
         className={`flex flex-col md:flex-row items-center justify-center gap-10 max-w-[1366px] w-full ${
           !isOdd ? "md:flex-row-reverse" : ""
@@ -193,18 +193,26 @@ const Single = ({ item, index }) => {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="overflow-hidden space-y-6"
+                    className="overflow-hidden"
                   >
-                    {item.pointSections.map((section, si) => (
-                      <div key={si}>
-                        <h4 className="text-[var(--brand-secondary)] font-bold mb-2">{section.heading}</h4>
-                        <ul className="space-y-1 text-sm text-gray-300">
-                          {section.points.map((p, pi) => (
-                            <li key={pi}><span className="font-semibold text-white">{p.name}</span> {p.desc}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {item.pointSections.map((section, si) => (
+                        <div key={si} className="bg-white/5 rounded-sm p-4">
+                          {section.heading && (
+                            <h4 className="text-[var(--brand-secondary)] font-bold mb-3 text-sm uppercase tracking-wide border-b border-white/10 pb-2">
+                              {section.heading}
+                            </h4>
+                          )}
+                          <ul className="space-y-2">
+                            {section.points.map((p, pi) => (
+                              <li key={pi} className="text-xs text-gray-300 leading-snug">
+                                <span className="font-semibold text-white">{p.name}</span> {p.desc}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
