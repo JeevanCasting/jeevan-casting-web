@@ -18,7 +18,7 @@ const services = [
       ],
     }],
     category: "Talent Acquisition",
-    image: "https://images.unsplash.com/photo-1577190651915-bf62d54d5b36?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Casting Direction & Services",
@@ -65,7 +65,7 @@ const services = [
       },
     ],
     category: "Artist Development",
-    image: "https://images.unsplash.com/photo-1570834322056-ba3e2994ab85?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://media.istockphoto.com/id/1127545285/photo/actress-in-front-of-the-camera-in-an-audition.webp?a=1&b=1&s=612x612&w=0&k=20&c=6BXX2OgVuS-AcBKD5sn4QjXMxEtmm15LPSghYw02wrM=",
   },
 ];
 

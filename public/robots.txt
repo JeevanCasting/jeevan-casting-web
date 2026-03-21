@@ -1,3 +1,12 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Block build artifacts and private paths
+Disallow: /static/js/
+Disallow: /static/css/
+Disallow: /static/media/
+
+# Sitemap
+Sitemap: https://jeevancasting.in/sitemap.xml

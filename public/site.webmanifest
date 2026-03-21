@@ -1,7 +1,24 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Jeevan Casting",
+  "short_name": "Jeevan Casting",
+  "description": "Mumbai's pan-India casting agency for Bollywood films, web series, OTT, and advertisements.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1a1a2e",
+  "background_color": "#1a1a2e",
   "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
@@ -14,8 +31,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffff01",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
