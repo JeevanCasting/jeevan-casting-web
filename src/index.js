@@ -11,7 +11,23 @@ root.render(
   // </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Register custom service worker for PWA support
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+    const isLocalhost = Boolean(
+      window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127\.\d+\.\d+\.\d+$/)
+    );
+
+    if (isLocalhost || window.location.protocol === 'https:') {
+      navigator.serviceWorker
+        .register(swUrl)
+        .then((reg) => console.log('[SW] Registered:', reg.scope))
+        .catch((err) => console.error('[SW] Registration failed:', err));
+    }
+  });
+}
+
 reportWebVitals();

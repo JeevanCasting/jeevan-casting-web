@@ -7,6 +7,7 @@ import NotFound from './screens/NotFound';
 import Services from './screens/Services';
 import ContactUs from './screens/ContactUs';
 import SubmitProfileForm from './screens/SubmitProfileForm';
+import InstallAppBanner from './components/InstallAppBanner';
 
 function App() {
 
@@ -25,8 +26,9 @@ function App() {
   )
   
   return (
-    <div >
+    <div>
       <RouterProvider router={router} />
+      <InstallAppBanner />
     </div>
   );
 }
